@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groovy</title>
+    <link rel="stylesheet" href="styles/library-section.css">
+    <link rel="stylesheet" href="styles/header-section.css">
+    <link rel="stylesheet" href="styles/timeline-section.css">
+    <link rel="stylesheet" href="styles/content-section.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/fyp/recentlyPlay.css">
+    <link rel="stylesheet" href="styles/fyp/Top-trending.css">
+    <link rel="stylesheet" href="styles/fyp/new-release.css">
+    <link rel="stylesheet" href="styles/fyp/forgotten-song.css">
+    <link rel="stylesheet" href="styles/fyp/top-mix-for-u.css">
+    <link rel="stylesheet" href="styles/fyp/best-song-for-party.css">
+    <link rel="stylesheet" href="styles/fyp/back-to-80s.css">
+    <link rel="stylesheet" href="styles/fyp/friends-fav.css">
+    <link rel="stylesheet" href="styles/fyp-scorllbar.css">
+    <link rel="stylesheet" href="styles/footer-section.css">
+    <link rel="stylesheet" href="styles/scroll.css">
+    <link rel="stylesheet" href="styles/filter-buttons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="resources/header-section/logo.png"type="image/x-icon" />
+
+    <style>
+
+        .middle-box{
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            bottom: 84px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header-box">
+        <div class="header-hamburger-icon-box">
+            <img class="header-hamburger-icon" src="resources/header-section/hamburger-white.png" alt="">
+        </div>
+        <div class="header-logo-section">
+            <a href="main-fyp.html">
+                <button class="header-logo-button">
+                    <img class="header-logo" src="resources/header-section/logo.png" alt="">
+                    <div class="tooltip">Home</div>
+                  </button>
+            </a>
+            <a href="main-fyp.html">
+                <button>
+                    <p class="header-logo-name">Groovy</p>
+                </button>
+            </a>
+        </div>
+
+        <div class="header-right-section">
+            <div class="nav-box">
+                <a class="nav-home-link" href="main-fyp.html">
+                    <button class="nav-button">Home</button>
+                </a>
+                <a class="nav-discover-link" href="discover-page.html">
+                    <button class="nav-button">Discover</button>
+                </a>
+                <a class="nav-about-us-link" href="about-us.html">
+                    <button class="nav-button">About Us</button>
+                </a>
+                <a class="nav-get-premium-link" href="get-premium-form.html">
+                    <button class="get-premium-button">
+                        Upgrade? 
+                    </button>
+                </a>
+            </div>
+            <div class="header-search-bar-section">
+                <input id="search-bar" type="text" placeholder="What's poppin?">
+    
+                <button class="header-search-button">
+                  <a href=""></a>
+                  <img class="header-search-icon" src="resources/header-section/search.png" alt="">
+                  <div class="tooltip">Search</div>
+                </button>
+                
+                <button class="header-search-bar-idea-button">
+                  <a href=""></a>
+                  <img class="header-search-bar-idea-icon" id="idea-icon-b4-hover" src="resources/header-section/idea.png" alt="">
+                  <div class="tooltip">Ideas?</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-user-icon-box">
+            <img class="header-user-icon" src="resources/header-section/alien-user-profile.png" alt="">
+            <img class="header-user-online-dot" src="resources/header-section/online-dot.png" alt="">
+        </div>
+    </div>
+    
+
+    <div class="middle-box">
+        <div class="library-box">
+            <div class="user-section">
+                <div class="user-profile-box">
+                    
+                    <button class="header-user-button">
+                        <a href="user-profile.html">
+                            <img class="user-profile-logo" src="resources/header-section/alien-user-profile.png" alt="">
+                            <div class="tooltip">Profile</div>
+                        </a>
+                    </button>
+                    <img class="user-profile-online" src="resources/header-section/online-dot.png" alt="">
+                </div>
+                
+                    <button class="username-button">
+                        <a href="user-profile.html">
+                            <div class="user-details-box">
+                                <p class="username"><span id="profile-name"></span></p>
+                                <div class="user-premium-status-box">
+                                    <p class="user-premium-status">Not member</p>
+                                    <img class="premium-upgrade-button" src="resources/header-section/up-arrow-white.png" alt="">
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </button>
+                
+                
+                <div>
+                    <button class="user-profile-more-button">
+                        <img class="user-profile-more-icon" src="resources/general-icons/more.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="library-title-box">
+                <p class="library-title">Library</p>
+                <button class="library-title-add-button">
+                    <img class="library-title-add-icon" src="resources/library-section/add.png" alt="">
+                </button>
+                <button class="library-title-expand-button">
+                    <img class="library-title-expand-icon" src="resources/library-section/expand-arrows.png" alt="">
+                </button>
+            </div>
+        
+            <div class="library-sort-search-box">
+                <p class="library-sort">sort by.</p>
+                <button class="library-search-button">
+                    <img class="library-search-icon" src="resources/library-section/search.png" alt="">
+                </button>
+            </div>
+        
+            <div class="library-items-box">
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        <img class="library-playing-img" src="resources/library-section/pause.png" alt="">
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/album-page/coldplay_parachutes.png" alt="">
+                        </a>
+                        <div class="tooltip">parachutes</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" id="current-playing-playlist-title" href="album-page.html">Parachutes</a> <!--change this later-->
+                        <p class="library-playlist-info" id="current-playing-playlist-info">Album | 10 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        2.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/moodyy-playlist-image.png" alt="">
+                        </a>
+                        <div class="tooltip">moodyyy</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">moodyyy</a>
+                        <p class="library-playlist-info">Playlist | 15 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        3.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="playlist-page.html">
+                          <img class="library-playlist-image" src="resources/playlist-page/silenthillfavorites.png" alt="">
+                        </a>
+                        <div class="tooltip">silent hill favorites</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="playlist-page.html">Silent hill favorites</a>
+                        <p class="library-playlist-info">Playlist | 16 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        4.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/requiem-album-image.png" alt="">
+                        </a>
+                        <div class="tooltip">Requiem</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">Requiem</a>
+                        <p class="library-playlist-info">Album | 13 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        5.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section//d4vd-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">d4vd</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">d4vd</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        6.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/retro-playlist-image.png" alt="">
+                        </a>
+                        <div class="tooltip">retro</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">retro</a>
+                        <p class="library-playlist-info">Playlist | 28 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        7.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/SOS-album-image.png" alt="">
+                        </a>
+                        <div class="tooltip">SOS</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">SOS</a>
+                        <p class="library-playlist-info">Album | 23 songs</p>
+                    </div>
+                </div>
+        
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        8.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section/xg-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">XG</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">XG</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+        
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        9.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section/raveena-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">Raveena</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">Raveena</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+
+            </div>
+    
+            <div class="current-enlarged-playing-song-box">
+                <img class="current-enlarged-playing-song-image" src="resources/library-section/indie-pop-playlist-image.png" alt="">
+                <button class="current-playing-collapse-button">
+                    <img class="current-playing-collapse-img" src="resources/library-section/expand-gray.png" alt="">
+                </button>
+            </div>
+        </div>
+        
+        <div class="content-part" id="content-part">
+            <div class="recently-play-container">
+                <div class="title-filter-box">
+                    <div class="recently-play-font filter-title-box">Recently Played</div>
+
+                    <div class="filter-box" id="rp-filter">
+                        <button class="filter-buttons" id="current-selected-filter">Best Related</button> <!--the button with id="current-selected-filter" must always be the first-->
+                        <button class="filter-buttons">See All</button> <!--if u need more buttons just copy&paste and change the content of button-->
+                    </div>
+                </div>
+                <!--updated horizontal scrollbar-->
+                <div class="recent-played-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul>
+                      <li>
+                        <a class="-recent-play-playlist-link" href="album-page.html">
+                            <div class="recently-play-item" >
+                                <div class="recently-play-outside-word">
+                                    <div class="recently-play-outside-word-1">
+                                    Top Hits
+                                    </div>
+                                    <div class="recently-play-outside-word-2">
+                                    Justin Bieber
+                                    </div>
+                                </div>
+        
+                                <div class="recent-play-pic-box">                        
+                                    <img class="recently-play-pic" src="resources/fyp-main-page/fyp-recent-played/recently-play-album-pic/OffMyFace.jpg" alt="">
+                                    <img class="play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                </div>
+                                <div class="recent-play-song"> 
+                                    <div class="recent-play-song-name-container">
+                                        <div class="recent-play-song-name">Feel The<br>  Vibes <br> From</div>
+                                        <div class="recent-play-song-name2">Justin Bieber</div>
+                                    </div>
+                                    <div class="recent-play-artist-name"> Justin Bieber Hits</div>  
+                                </div>
+                            </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="-recent-play-playlist-link" href="album-page.html">
+                            <div class="recently-play-item" >
+                                <div class="recently-play-outside-word">
+                                    <div class="recently-play-outside-word-1">
+                                    Great Song from
+                                    </div>
+                                    <div class="recently-play-outside-word-2">
+                                    The Kid Laroi
+                                    </div>
+                                </div>
+        
+                                <div class="recent-play-pic-box">                        
+                                    <img class="recently-play-pic" src="resources/fyp-main-page/fyp-recent-played/recently-play-album-pic/BabyImBack.jpg" alt="">
+                                    <img class="play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                </div>
+                                <div class="recent-play-song"> 
+                                    <div class="recent-play-song-name-container">
+                                        <div class="recent-play-song-name">BABY <br> I'M <br>BACK</div>
+                                        <div class="recent-play-song-name2">The Kid Laroi</div>
+                                    </div>
+                                <div class="    recent-play-artist-name">THE FIRST TIME (DELUXE VERSION)</div>  
+                                </div>
+                            </div>                         
+                        </a>
+                      </li>
+                      <li>
+                        <a class="-recent-play-playlist-link" href="album-page.html">
+                            <div class="recently-play-item" >
+                                <div class="recently-play-outside-word">
+                                    <div class="recently-play-outside-word-1">
+                                    Fun Mix
+                                    </div>
+                                    <div class="recently-play-outside-word-2">
+                                    For Party
+                                    </div>
+                                </div>
+        
+                                <div class="recent-play-pic-box">                        
+                                    <img class="recently-play-pic" src="resources/fyp-main-page/fyp-recent-played/recently-play-album-pic/Snooze.jpg" alt="">
+                                    <img class="play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                </div>
+                                <div class="recent-play-song"> 
+                                    <div class="recent-play-song-name-container">
+                                        <div class="recent-play-song-name">Stay <br> Fun <br>With</div>
+                                        <div class="recent-play-song-name2">Sza Drake Bazzi Lil Tecca</div>
+                                    </div>
+                                    <div class="recent-play-artist-name">Fun Mix</div>  
+                                </div>
+                            </div>    
+                        </a>
+                      </li>
+                      <li>
+                        <a class="-recent-play-playlist-link" href="album-page.html">
+                            <div class="recently-play-item" >
+                                <div class="recently-play-outside-word">
+                                    <div class="recently-play-outside-word-1">
+                                    Hear it again
+                                    </div>
+                                    <div class="recently-play-outside-word-2">
+                                    
+                                    </div>
+                                </div>
+        
+                                <div class="recent-play-pic-box">                        
+                                    <img class="recently-play-pic" src="resources/fyp-main-page/fyp-recent-played/recently-play-album-pic/Jsheon.jpeg" alt="">
+                                    <img class="play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                </div>
+                                <div class="recent-play-song"> 
+                                    <div class="recent-play-song-name-container">
+                                        <div class="recent-play-song-name">热门 <br>歌曲 <br>别问很可怕</div>
+                                        <div class="recent-play-song-name2">J.Sheon</div>
+                                    </div>
+                                    <div class="recent-play-artist-name">J.Sheon</div>  
+                                </div>
+                            </div>
+  
+                        </a>
+                      </li>
+                      <li>
+                        <a class="-recent-play-playlist-link" href="album-page.html">
+                            <div class="recently-play-item" >
+                                <div class="recently-play-outside-word">
+                                    <div class="recently-play-outside-word-1">
+                                    Top Hits
+                                    </div>
+                                    <div class="recently-play-outside-word-2">
+                                    Olivia Rodrigo
+                                    </div>
+                                </div>
+        
+                                <div class="recent-play-pic-box">                        
+                                    <img class="recently-play-pic" src="resources/fyp-main-page/fyp-recent-played/recently-play-album-pic/Olivia-Rodrigo.webp" alt="">
+                                    <img class="play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                </div>
+                                <div class="recent-play-song"> 
+                                    <div class="recent-play-song-name-container">
+                                        <div class="recent-play-song-name">Sit <br> back and <br> relax with</div>
+                                        <div class="recent-play-song-name2">Olivia Rodrigo</div>
+                                    </div>
+                                    <div class="recent-play-artist-name">Best of Olivia Rodrigo</div>  
+                                </div>
+                            </div>    
+                        </a>
+                      </li>
+                      <li>
+                        <a class="-recent-play-playlist-link" href="album-page.html">
+                            <div class="recently-play-item" >
+                                <div class="recently-play-outside-word">
+                                    <div class="recently-play-outside-word-1">
+                                    Listen again
+                                    </div>
+                                    <div class="recently-play-outside-word-2">
+                                    
+                                    </div>
+                                </div>
+        
+                                <div class="recent-play-pic-box">                        
+                                    <img class="recently-play-pic" src="resources/fyp-main-page/fyp-recent-played/recently-play-album-pic/Honesty.jpeg" alt="">
+                                    <img class="play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                </div>
+                                <div class="recent-play-song"> 
+                                    <div class="recent-play-song-name-container">
+                                        <div class="recent-play-song-name">Chill with <br>Pink Sweat$, <br>Jessie Reyez</div>
+                                        <div class="recent-play-song-name2">Honesty</div>
+                                    </div>
+                                    <div class="recent-play-artist-name">Pink Planet</div>  
+                                </div>
+                            </div>    
+                        </a>
+                      </li>
+                      <li>
+                        <a class="-recent-play-playlist-link" href="album-page.html">
+                            <div class="recently-play-item" >
+                                <div class="recently-play-outside-word">
+                                    <div class="recently-play-outside-word-1">
+                                    Ur most listened rap
+                                    </div>
+                                    <div class="recently-play-outside-word-2">
+                                    
+                                    </div>
+                                </div>
+        
+                                <div class="recent-play-pic-box">                        
+                                    <img class="recently-play-pic" src="resources/fyp-main-page/fyp-recent-played/recently-play-album-pic/Empire.jpg" alt="">
+                                    <img class="play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                </div>
+                                <div class="recent-play-song"> 
+                                    <div class="recent-play-song-name-container">
+                                        <div class="recent-play-song-name">成都 <br>CDC厂牌推荐<br>Empire</div>
+                                        <div class="recent-play-song-name2">Higher Brothers</div>
+                                    </div>
+                                    <div class="recent-play-artist-name">Empire</div>  
+                                </div>
+                            </div>  
+                            </a>
+                      </li>
+                      <li>
+                        <a class="-recent-play-playlist-link" href="album-page.html">
+                            <div class="recently-play-item" id="last-recently-play-item">
+                                <div class="recently-play-outside-word">
+                                    <div class="recently-play-outside-word-1">
+                                    Listen Again
+                                    </div>
+                                    <div class="recently-play-outside-word-2">
+                                    
+                                    </div>
+                                </div>
+        
+                                <div class="recent-play-pic-box">                        
+                                    <img class="recently-play-pic" src="resources/fyp-main-page/fyp-recent-played/recently-play-album-pic/Inferno.jpeg" alt="">
+                                    <img class="play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                </div>
+                                <div class="recent-play-song"> 
+                                    <div class="recent-play-song-name-container">
+                                        <div class="recent-play-song-name">Hits From <br>Sub Urban, <br>Bella Poarch</div>
+                                        <div class="recent-play-song-name2">Inferno</div>
+                                    </div>
+                                    <div class="recent-play-artist-name">Hive</div>  
+                                </div>
+                            </div>   
+                        </a>
+                      </li>
+                      <li>
+                    </ul>
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="top-trending-container">
+
+                <div class="title-filter-box">
+                    <div class="top-trending-topic filter-title-box">Top Trending</div>
+
+                    <div class="filter-box"  id="tt-filter">
+                        <button class="filter-buttons" id="current-selected-filter">Best Related</button> <!--the button with id="current-selected-filter" must always be the first-->
+                        <button class="filter-buttons">See All</button> <!--if u need more buttons just copy&paste and change the content of button-->
+                    </div>
+                </div>
+                <!--updated horizontal scrollbar-->
+                <div class="topTrending-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul>
+                      <li>
+                        <a class="playlist-link" href="album-page.html"> 
+                            <div class="top-trending-item">
+                                <div class="image">
+                                    <img class="top-trending-pic" src="resources/fyp-main-page/fyp-top-hits/top-hits.jpg" alt="">
+                                </div>
+                                <div class="top-trending-song">
+                                    <div class="top-trending-song-topic">
+                                        Top Hit Songs
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/baby-im-back.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                BABY I"M BACK
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                The Kid Laroi
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/kiss-me-more.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                Kiss Me More(feat.SZA)
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Doja Cat,SZA
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/without-you-kid-lario.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                WITHOUT YOU
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                The Kid Laroi
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/SOS-album-image.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                Snooze
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                SZA
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <div class="top-trending-show-more">
+                                            show more...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="playlist-link" href="album-page.html"> 
+                            <div class="top-trending-item">
+                                <div class="image">
+                                    <img class="top-trending-pic" src="resources/fyp-main-page/fyp-top-hits/pop.jpg" alt="">
+                                </div>
+                                <div class="top-trending-song">
+                                    <div class="top-trending-song-topic">
+                                        Top Pop 50
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/off-my-face.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                Off My Face
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Justin Bieber
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/california.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                California
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                88rising,RichBrian$....
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/obsessed-amuyu.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                Obsessed
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Ayumu Imazu
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/circle-post-malone.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                Circle
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Post Malone
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <div class="top-trending-show-more">
+                                            show more...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="playlist-link" href="album-page.html"> 
+                            <div class="top-trending-item">
+                                <div class="image">
+                                    <img class="top-trending-pic" src="resources/fyp-main-page/fyp-top-hits/rap.jpg" alt="">
+                                </div>
+                                <div class="top-trending-song">
+                                    <div class="top-trending-song-topic">
+                                        Top Rap 50
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/blueberry-faygo.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                Blueberry Faygo
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Lil Mosey
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/gods-plan.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                God's Plan
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Drake
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/rockstar-dababy.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                ROCKSTAR(feat. Roddy Ricch)
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Dababy, Roddy Ricch
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/slcko mode.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                Sicko Mode
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Travis Scott
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <div class="top-trending-show-more">
+                                            show more...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="playlist-link" href="album-page.html"> 
+                            <div class="top-trending-item">
+                                <div class="image">
+                                    <img class="top-trending-pic" src="resources/fyp-main-page/fyp-top-hits/mandarin.jpg" alt="">
+                                </div>
+                                <div class="top-trending-song">
+                                    <div class="top-trending-song-topic">
+                                        Top Mandarin 2024
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/trust-me.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                Trust Me
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                Sunkis 宋秉勤
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/shun.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                瞬
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                鄭潤澤
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/im-ok-david-tao.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                普通朋友
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                David Tao
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <img class="top-trending-song-pic" src="resources/fyp-main-page/fyp-top-hits/so bad.png" alt="">
+                                        <div class="top-trending-song-details">
+                                            <div class="top-trending-song-name">
+                                                So Bad
+                
+                                            </div>
+                                            <div class="top-trending-song-artist">
+                                                高爾宣OSN
+                                            </div>
+                                        </div>                            
+                                    </div>
+                                    <div class="top-trending-song-item">
+                                        <div class="top-trending-show-more">
+                                            show more...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="new-release-container"> 
+                <div class="new-release-background-box">
+                    <a class="new-release-playlist-link" href="main-fyp.html"> 
+                        <img class="new-release-background-pic" src="resources/fyp-main-page/fyp-new-release/APTMV.jpg" alt="">
+                    </a>
+                    <video class="new-release-background-video" autoplay loop muted playsinline src="resources/fyp-main-page/fyp-new-release/APTMV.mp4" alt="">
+                    <audio class="new-release-song-audio" preload="auto" src="resources/fyp-main-page/fyp-new-release/apt-song-audio.MP3" type="audio/mpeg"></audio>
+                    </video>
+                </div>
+                
+                <div class="new-release-item">
+                    <div class="new-release-album-pic-container">
+                        <img class="new-release-album-pic"  src="resources/fyp-main-page/fyp-new-release/apt - white vinyl.png" alt="">
+                    </div>
+                    <div class="after-hover-new-release-word">
+                        A Explosive Collab from the western music star and korean pop star "ROSE and BRUNO MARS"
+                        <br>
+                        It is a pop, pop-punk, and pop rock track, featuring indie rock and electropop influences. Inspired by a South Korean drinking game, the song's chorus is built around the game's rhythmic chant of apateu. 
+                    </div>
+                    <div class="new-release-word">
+                        <div class="new-release-topic">NEW RELEASE</div>
+                        <div class="new-release-song-name">APT</div>
+                        <div class="new-release-song-info">ROSÉ & Bruno Mars | APT | 2024</div>
+                        <div class="new-release-footer">
+                            <div class="new-release-footer-pic-box">
+                                <img class="new-release-footer-pic" src="resources/fyp-main-page/fyp-new-release/musical-note-white.png" alt="">
+                            </div>
+                            <div class="new-release-footer-word">169,395,365 streams</div>
+                        </div>
+                    </div>
+                    <div class="new-release-roseBruno-pic-container">
+                        <img class="new-release-roseBruno-pic" src="resources/fyp-main-page/fyp-new-release/apt-removebg-preview.png" alt="">
+                    </div>
+                </div> 
+            </div>
+            <div class="your-forgotten-song-container">
+
+                <div class="title-filter-box" id="fs-title-box">
+                    <div class="your-forgotten-songs-topic filter-title-box">Your Forgotten Songs</div>
+
+                    <div class="filter-box" id="forgot-filter">
+                        <button class="filter-buttons" id="current-selected-filter">Best Related</button> <!--the button with id="current-selected-filter" must always be the first-->
+                        <button class="filter-buttons">See All</button> <!--if u need more buttons just copy&paste and change the content of button-->
+                    </div>
+                </div>
+
+                <!--updated horizontal scrollbar-->
+                <div class="yourForgotten-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/The Kid LAROI - Love Again (Official Video).mp3" type="audio/mpeg"></audio>
+                                
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/love-again-kid-lario.jpeg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/love-again-black-vinyl.png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">Love Again</div>
+                                        <div class="your-forgotten-song-item-word-artistname">The Kid Laroi</div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/李浩瑋 Howard Lee真心話 From The Bottom Of Your Heart Official Music Video(4K).mp3" type="audio/mpeg"></audio>
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/zhenxinhua.jpeg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/black-vinyl-zhenxinhua.png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">真心话</div>
+                                        <div class="your-forgotten-song-item-word-artistname">Howard Lee</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/Pink Sweat$ - At My Worst (Official Video).mp3" type="audio/mpeg"></audio>
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/at-my-worst.jpeg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/black-vinyl-at-my-worst.png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">At My Worst</div>
+                                        <div class="your-forgotten-song-item-word-artistname">Pink Sweat$</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/92914 - Okinawa (Audio).mp3" type="audio/mpeg"></audio>
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/okinawa.jpeg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/black-vinyl-okinawa.png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">Okinawa</div>
+                                        <div class="your-forgotten-song-item-word-artistname">92914</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/Justin Bieber - Off My Face (Visualizer).mp3" type="audio/mpeg"></audio>
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/off-my-face.jpeg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/Offmyface.png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">Off My Face</div>
+                                        <div class="your-forgotten-song-item-word-artistname">Justin Bieber</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/SZA - Snooze (Audio).mp3" type="audio/mpeg"></audio>
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/Snooze.jpg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/snooze-vinyl (1).png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">Snooze</div>
+                                        <div class="your-forgotten-song-item-word-artistname">Sza</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/方大同 - 特別的人我們是對方 特別的人動態歌詞Lyrics.mp3" type="audio/mpeg"></audio>
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/SpecialWoman.jpg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/SpecialPerson.png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">特别的人</div>
+                                        <div class="your-forgotten-song-item-word-artistname">方大同</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/The Kid LAROI - BABY I'M BACK (Official Audio).mp3" type="audio/mpeg"></audio>
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/BabyImBack.jpg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/Babyimback-vinyl (3).png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">BABY I'M BACK</div>
+                                        <div class="your-forgotten-song-item-word-artistname">The Kid Laroi</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="your-forgotten-song-playlist-link" href="album-page.html"> 
+                                <div class="your-forgotten-song-item"> 
+                                    <img class="ur-forgot-song-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="ur-forgot-song-audio" preload="auto" src="resources/fyp-main-page/fyp-forgotten/SongsForgotten/sunkis 宋秉勤 - trust me.mp3" type="audio/mpeg"></audio>
+                                    <div class="your-forgotten-song-item-pic-container">
+                                        <img class="your-forgotten-song-item-pic1" src="resources/fyp-main-page/fyp-forgotten/TrustMe.jpg" alt="">
+                                        <img class="your-forgotten-song-item-pic2" src="resources/fyp-main-page/fyp-forgotten/trustme-vinyl.png" alt="">
+                                    </div>
+                                    <div class="your-forgotten-song-item-word-container">
+                                        <div class="your-forgotten-song-item-word-songname">Trust Me</div>
+                                        <div class="your-forgotten-song-item-word-artistname">Sunkis 宋秉勤</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="top-mix-for-you-container">
+                <div class="title-filter-box" id="filter-box">
+                    <div class="top-mix-for-you-topic filter-title-box">Top Mix For You</div>
+
+                    <div class="filter-box" id="top-mix-filer">
+                        <button class="filter-buttons" id="current-selected-filter">Best Related</button> <!--the button with id="current-selected-filter" must always be the first-->
+                        <button class="filter-buttons" id="tm-see-all">See All</button> <!--if u need more buttons just copy&paste and change the content of button-->
+                    </div>
+                </div>
+                <!--updated horizontal scrollbar-->
+                <div class="topMix-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="top-mix-for-you-playlist-link" href="album-page.html"> 
+                                <div class="top-mix-for-you-item">
+                                    <div class="top-mix-for-you-album-box">
+                                        <img class="top-mix-for-you-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                        <img class="top-mix-for-you-album-pic" src="resources/fyp-main-page/fyp-mix-for-you/Justin.jpeg" alt="">
+                                    </div>
+                                    <div class="top-mix-for-you-details-box">
+                                        <div class="top-mix-for-you-details-1">Justin Bieber Mix</div>
+                                        <div class="top-mix-for-you-details-2">Baby, Intention, Stay, Off My Face,Lonely,Yummy...</div>
+                                    </div>
+                                    <div class="top-mix-for-you-word-box">
+                                        <div class="top-mix-for-you-album-word1">Top Mix</div>
+                                        <div class="top-mix-for-you-album-word2">Justin Bieber</div>
+                                    </div>
+                                    <div class="top-mix-for-you-play-desc">Top<br>Mix<br>From<br>Justin Bieber</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="top-mix-for-you-playlist-link" href="album-page.html"> 
+                                <div class="top-mix-for-you-item">
+                                    <div class="top-mix-for-you-album-box">
+                                        <img class="top-mix-for-you-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                        <img class="top-mix-for-you-album-pic" src="resources/fyp-main-page/fyp-mix-for-you/holiday-mix.jpeg" alt="">
+                                    </div>
+                                    <div class="top-mix-for-you-details-box">
+                                        <div class="top-mix-for-you-details-1">Holiday Mix</div>
+                                        <div class="top-mix-for-you-details-2">Apt, Better Days, Snooze, Kill Bill, Double take...</div>
+                                    </div>
+                                    <div class="top-mix-for-you-word-box">
+                                        <div class="top-mix-for-you-album-word1">Best for</div>
+                                        <div class="top-mix-for-you-album-word2">HOLIDAYS</div>
+                                    </div>
+                                    <div class="top-mix-for-you-play-desc">Top<br>Mix<br>For<br>Holiday Feeling</div>
+                                </div>         
+                            </a>
+                        </li>
+                        <li>
+                            <a class="top-mix-for-you-playlist-link" href="album-page.html"> 
+                                <div class="top-mix-for-you-item">
+                                    <div class="top-mix-for-you-album-box">
+                                        <img class="top-mix-for-you-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                        <img class="top-mix-for-you-album-pic" src="resources/fyp-main-page/fyp-mix-for-you/joji.jpeg" alt="">
+                                    </div>
+                                    <div class="top-mix-for-you-details-box">
+                                        <div class="top-mix-for-you-details-1">Joji Mix</div>
+                                        <div class="top-mix-for-you-details-2">Glimpse of Us, Die For You, Sanctuary, SLOW DANCING IN THE DARK</div>
+                                    </div>
+                                    <div class="top-mix-for-you-word-box">
+                                        <div class="top-mix-for-you-album-word1">Top Mix</div>
+                                        <div class="top-mix-for-you-album-word2">Joji</div>
+                                    </div>
+                                    <div class="top-mix-for-you-play-desc">Top<br>Mix<br>From<br>Joji</div>
+                                </div> 
+                            </a>
+                        </li>
+                        <li>
+                            <a class="top-mix-for-you-playlist-link" href="album-page.html"> 
+                                <div class="top-mix-for-you-item">
+                                    <div class="top-mix-for-you-album-box">
+                                        <img class="top-mix-for-you-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                        <img class="top-mix-for-you-album-pic" src="resources/fyp-main-page/fyp-mix-for-you/keshi.jpeg" alt="">
+                                    </div>
+                                    <div class="top-mix-for-you-details-box">
+                                        <div class="top-mix-for-you-details-1">Keshi Mix</div>
+                                        <div class="top-mix-for-you-details-2">soft spot, drunk, war, limbo, right here</div>
+                                    </div>
+                                    <div class="top-mix-for-you-word-box">
+                                        <div class="top-mix-for-you-album-word1">Top Mix</div>
+                                        <div class="top-mix-for-you-album-word2">Keshi</div>
+                                    </div>
+                                    <div class="top-mix-for-you-play-desc">Top<br>Mix<br>From<br>Keshi</div>
+                                </div> 
+                            </a>
+                        </li>
+                        <li>
+                            <a class="top-mix-for-you-playlist-link" href="album-page.html"> 
+                                <div class="top-mix-for-you-item">
+                                    <div class="top-mix-for-you-album-box">
+                                        <img class="top-mix-for-you-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                        <img class="top-mix-for-you-album-pic" src="resources/fyp-main-page/fyp-mix-for-you/Rap.jpg" alt="">
+                                    </div>
+                                    <div class="top-mix-for-you-details-box">
+                                        <div class="top-mix-for-you-details-1">Rap Mix</div>
+                                        <div class="top-mix-for-you-details-2">Ransom, Blueberry Faygo, BAND4BAND, Gods Plan, Bandit, BILLIE EILISH</div>
+                                    </div>
+                                    <div class="top-mix-for-you-word-box">
+                                        <div class="top-mix-for-you-album-word1">20's</div>
+                                        <div class="top-mix-for-you-album-word2">Rap Mix</div>
+                                    </div>
+                                    <div class="top-mix-for-you-play-desc">Best<br>Rap<br>Mix<br>Just For You</div>
+                                </div> 
+                            </a>
+                        </li>
+                        <li>
+                            <a class="top-mix-for-you-playlist-link" href="album-page.html"> 
+                                <div class="top-mix-for-you-item">
+                                    <div class="top-mix-for-you-album-box">
+                                        <img class="top-mix-for-you-play-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                        <img class="top-mix-for-you-album-pic" src="resources/fyp-main-page/fyp-mix-for-you/mandarin.jpg" alt="">
+                                    </div>
+                                    <div class="top-mix-for-you-details-box">
+                                        <div class="top-mix-for-you-details-1">Mandarin Mix</div>
+                                        <div class="top-mix-for-you-details-2">瞬，哪里都是你，别问很可怕， 爱怎么了，普通朋友，有些</div>
+                                    </div>
+                                    <div class="top-mix-for-you-word-box">
+                                        <div class="top-mix-for-you-album-word1">Most listened in 2024</div>
+                                        <div class="top-mix-for-you-album-word2">Mandarin Mix</div>
+                                    </div>
+                                    <div class="top-mix-for-you-play-desc">Top<br>Mandarin<br>In<br>2024</div>
+                                </div> 
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="best-song-for-party-container">
+                <div class="title-filter-box" id="party-title-box">
+                    <div class="best-song-for-party-topic filter-title-box">Best Song For Party</div>
+
+                    <div class="filter-box" id="best-song-filter">
+                        <button class="filter-buttons" id="current-selected-filter">Best Related</button> <!--the button with id="current-selected-filter" must always be the first-->
+                        <button class="filter-buttons">See All</button> <!--if u need more buttons just copy&paste and change the content of button-->
+                    </div>
+                </div>
+
+                <!--updated horizontal scrollbar-->
+                <div class="party-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/mamushi.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/mamushi.jpeg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/black-vinyl-mamushi.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">Mamushi (Remix)</div>
+                                        <div class="best-song-for-item-word-artistname">Megan Thee Stallion, TWICE</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/ransom.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/ransom.jpeg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/black-vinyl-ransom.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">Ransom</div>
+                                        <div class="best-song-for-item-word-artistname">Lil Tecca</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/roxanne.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/roxanne.jpeg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/black-vinyl-roxanne.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">Roxanne</div>
+                                        <div class="best-song-for-item-word-artistname">Arizona Zervas</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/bigdawgs.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/big-dawgs.jpeg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/black-vinyl-big-dawgs.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">Big Dawgs</div>
+                                        <div class="best-song-for-item-word-artistname">Hanumankind & Kalmi</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/ifly.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/ifly.jpg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/iflyvinyl.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">I.F.L.Y</div>
+                                        <div class="best-song-for-item-word-artistname">Bazzi</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/LucidDream.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/luciddream.jpeg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/LucidDreamVinyl.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">Lucid Dreams</div>
+                                        <div class="best-song-for-item-word-artistname">Juice WRLD</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/lovelovelove.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/aiaiai.jpg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/loveloveloveVinyl.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">爱爱爱-Love Love Love</div>
+                                        <div class="best-song-for-item-word-artistname">方大同</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/Peaches.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/off-my-face.jpeg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/Offmyface.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">Peaches(feat. Daniel Caesar & Giveon)</div>
+                                        <div class="best-song-for-item-word-artistname">Justin Bieber</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="best-song-for-party-item"> 
+                                    <img class="best-song-for-party-button" src="resources/fyp-main-page/fyp-recent-played/play.png" alt="">
+                                    <audio source class="best-song-for-party-audio" preload="auto" src="resources/fyp-main-page/fyp-best-for-party/song-best-for-party-audio/stay.MP3" type="audio/mpeg"></audio>
+                                    <div class="best-song-for-party-item-pic-container">
+                                        <img class="best-song-for-party-item-pic1" src="resources/fyp-main-page/fyp-best-for-party/stay.jpeg" alt="">
+                                        <img class="best-song-for-party-item-pic2" src="resources/fyp-main-page/fyp-best-for-party/StayVinyl.png" alt="">
+                                    </div>
+                                    <div class="best-song-for-party-item-word-container">
+                                        <div class="best-song-for-party-item-word-songname">Stay</div>
+                                        <div class="best-song-for-item-word-artistname">The Kid Laroi & Justin Bieber</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="back-to-80s-container"> 
+                <div class="back-to-80s-background-box">
+                    <a class="back-to-80s-playlist-link" href=""> 
+                        <img class="back-to-80s-background-pic" src="resources/fyp-main-page/fyp-back-to-80s/background.png" alt="">
+                    </a>
+                    <video class="back-to-80s-background-video" autoplay loop muted playsinline src="resources/fyp-main-page/fyp-back-to-80s/back-to-80s-vid-audio/back-to-80s-vid.mp4" alt="">
+                    <audio class="back-to-80s-audio" preload="auto" src="resources/fyp-main-page/fyp-back-to-80s/back-to-80s-vid-audio/back-to-80s-audio.MP3" type="audio/mpeg"></audio>
+                    </video>
+                </div>
+            
+                <div class="back-to-80s-item">
+                    <div class="back-to-80s-album-pic-container">
+                        <img class="back-to-80s-album-pic"  src="resources/fyp-main-page/fyp-back-to-80s/shes-so-unusual-vinyl.png" alt="">
+                    </div>
+                    <div class="after-hover-back-to-80s-word">
+                        Singles from She's So Unusual
+                        <ul>
+                            <li>"Girls Just Want to Have Fun"</li>
+                            <li>"Time After Time"</li>
+                            <li>"Money Changes Everything"</li>
+                            <li>"She Bop"</li>
+                            <li>"All Through the Night"</li>
+                            <li>"When You Were Mine"</li>
+                        </ul>
+                    </div>
+                    <div class="back-to-80s-word">
+                        <div class="back-to-80s-topic">BACK TO THE 80"S</div>
+                        <div class="back-to-80s-song-name">She's So Unusual</div>
+                        <div class="back-to-80s-song-info">Cyndi Lauper | Album | 1983</div>
+                        <div class="back-to-80s-footer">
+                            <div class="back-to-80s-footer-pic-box">
+                                <img class="back-to-80s-footer-pic" src="resources/fyp-main-page/fyp-back-to-80s/musical-note-white.png" alt="">
+                            </div>
+                            <div class="back-to-80s-footer-word">1,280,594,763 streams</div>
+                        </div>
+                    </div>
+                    <div class="back-to-80s-roseBruno-pic-container">
+                        <img class="back-to-80s-roseBruno-pic" src="resources/fyp-main-page/fyp-back-to-80s/gramaphone.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="friends-fav-container">
+                <div class="friends-fav-topic">Friend's Favourites</div>
+                <!--updated horizontal scrollbar-->
+                <div class="friendsFavourite-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="friends-fav-item">
+                                    
+                                    <div class="friends-fav-item-header">
+    
+                                        <div class="friends-fav-item-header-hover-details">
+    
+                                            <div class="friends-fav-item-header-hover-details-avatar-box">
+    
+                                                <img class="friends-fav-item-header-hover-details-avatar" src="resources/fyp-main-page/fyp-friends-favourite/duck-user-profile.png" alt="">
+                                                
+                                                <div class="friends-fav-item-header-hover-details-avatar-word">
+                                                    <h3>Duck</h3>                            
+                                                    <p>Joined in May , 2023</p>
+                                                </div>
+                                            </div>
+    
+                                            <div class="friends-fav-item-header-hover-details-info">
+                                                
+                                                <div class="ff-follow-box">
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">12</div>
+                                                        Following 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">3</div>
+                                                        Followers 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">5</div>
+                                                        Public Playlist
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 class="friends-fav-item-header-word">Duck's Favourite</h3>
+                                        <img class="friends-fav-item-header-pic" src="resources/fyp-main-page/fyp-friends-favourite/duck-user-profile.png" alt="">
+                                    </div>
+                                    
+                                    <div class="friends-fav-item-thingy">
+    
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/sweet-time-raveena-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Sweet Time
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Raveena
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/woke-up-xg-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                WOKE UP
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                XG
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/home-kaz-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Home
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Kaz
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="friends-fav-item">
+                                    
+                                    <div class="friends-fav-item-header">
+    
+                                        <div class="friends-fav-item-header-hover-details">
+    
+                                            <div class="friends-fav-item-header-hover-details-avatar-box">
+    
+                                                <img class="friends-fav-item-header-hover-details-avatar" src="resources/fyp-main-page/fyp-friends-favourite/dinosaur-user-profile.png" alt="">
+                                                
+                                                <div class="friends-fav-item-header-hover-details-avatar-word">
+                                                    <h3>Dino</h3>                            
+                                                    <p>Joined in March , 2023</p>
+                                                </div>
+                                            </div>
+    
+                                            <div class="friends-fav-item-header-hover-details-info">
+                                                
+                                                <div class="ff-follow-box">
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">20</div>
+                                                        Following 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">6</div>
+                                                        Followers 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">3</div>
+                                                        Public Playlist
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 class="friends-fav-item-header-word">Dino's Favourite</h3>
+                                        <img class="friends-fav-item-header-pic" src="resources/fyp-main-page/fyp-friends-favourite/dinosaur-user-profile.png" alt="">
+                                    </div>
+                                    
+                                    <div class="friends-fav-item-thingy">
+    
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/whiplash-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Whiplash
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Aespa
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/too-much-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                太多的爱(Too Much)
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Kinkis
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/without-you-osn-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Without You
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                高爾宣OSN
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href="album-page.html"> 
+                                <div class="friends-fav-item">
+                                    
+                                    <div class="friends-fav-item-header">
+    
+                                        <div class="friends-fav-item-header-hover-details">
+    
+                                            <div class="friends-fav-item-header-hover-details-avatar-box">
+    
+                                                <img class="friends-fav-item-header-hover-details-avatar" src="resources/fyp-main-page/fyp-friends-favourite/duck-user-profile.png" alt="">
+                                                
+                                                <div class="friends-fav-item-header-hover-details-avatar-word">
+                                                    <h3>Duck</h3>                            
+                                                    <p>Joined in May , 2023</p>
+                                                </div>
+                                            </div>
+    
+                                            <div class="friends-fav-item-header-hover-details-info">
+                                                
+                                                <div class="ff-follow-box">
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">12</div>
+                                                        Following 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">3</div>
+                                                        Followers 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">5</div>
+                                                        Public Playlist
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 class="friends-fav-item-header-word">Duck's Favourite</h3>
+                                        <img class="friends-fav-item-header-pic" src="resources/fyp-main-page/fyp-friends-favourite/duck-user-profile.png" alt="">
+                                    </div>
+                                    
+                                    <div class="friends-fav-item-thingy">
+    
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/sweet-time-raveena-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Sweet Time
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Raveena
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/woke-up-xg-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                WOKE UP
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                XG
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/home-kaz-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Home
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Kaz
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href=""> 
+                                <div class="friends-fav-item">
+                                    
+                                    <div class="friends-fav-item-header">
+    
+                                        <div class="friends-fav-item-header-hover-details">
+    
+                                            <div class="friends-fav-item-header-hover-details-avatar-box">
+    
+                                                <img class="friends-fav-item-header-hover-details-avatar" src="resources/fyp-main-page/fyp-friends-favourite/dinosaur-user-profile.png" alt="">
+                                                
+                                                <div class="friends-fav-item-header-hover-details-avatar-word">
+                                                    <h3>Dino</h3>                            
+                                                    <p>Joined in March , 2023</p>
+                                                </div>
+                                            </div>
+    
+                                            <div class="friends-fav-item-header-hover-details-info">
+                                                
+                                                <div class="ff-follow-box">
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">20</div>
+                                                        Following 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">6</div>
+                                                        Followers 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">3</div>
+                                                        Public Playlist
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 class="friends-fav-item-header-word">Dino's Favourite</h3>
+                                        <img class="friends-fav-item-header-pic" src="resources/fyp-main-page/fyp-friends-favourite/dinosaur-user-profile.png" alt="">
+                                    </div>
+                                    
+                                    <div class="friends-fav-item-thingy">
+    
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/whiplash-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Whiplash
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Aespa
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/too-much-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                太多的爱(Too Much)
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Kinkis
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/without-you-osn-vinyl.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Without You
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                高爾宣OSN
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href=""> 
+                                <div class="friends-fav-item">
+                                    
+                                    <div class="friends-fav-item-header">
+    
+                                        <div class="friends-fav-item-header-hover-details">
+    
+                                            <div class="friends-fav-item-header-hover-details-avatar-box">
+    
+                                                <img class="friends-fav-item-header-hover-details-avatar" src="resources/fyp-main-page/fyp-friends-favourite/OsasAvatar.png" alt="">
+                                                
+                                                <div class="friends-fav-item-header-hover-details-avatar-word">
+                                                    <h3>Osas</h3>                            
+                                                    <p>Joined in May , 2023</p>
+                                                </div>
+                                            </div>
+    
+                                            <div class="friends-fav-item-header-hover-details-info">
+                                                
+                                                <div class="ff-follow-box">
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">14</div>
+                                                        Following 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">8</div>
+                                                        Followers 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">6</div>
+                                                        Public Playlist
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 class="friends-fav-item-header-word">Osas's Favourite</h3>
+                                        <img class="friends-fav-item-header-pic" src="resources/fyp-main-page/fyp-friends-favourite/OsasAvatar.png" alt="">
+                                    </div>
+                                    
+                                    <div class="friends-fav-item-thingy">
+    
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/off-my-face.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Off My Face
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Justin Bieber
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/so bad.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                So Bad
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                高爾宣OSN
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/baby-im-back.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                BABY I'M BACK
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                The Kid Laroi
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="playlist-link" href=""> 
+                                <div class="friends-fav-item">
+                                    
+                                    <div class="friends-fav-item-header">
+    
+                                        <div class="friends-fav-item-header-hover-details">
+    
+                                            <div class="friends-fav-item-header-hover-details-avatar-box">
+    
+                                                <img class="friends-fav-item-header-hover-details-avatar" src="resources/fyp-main-page/fyp-friends-favourite/MickeyAvatar.png" alt="">
+                                                
+                                                <div class="friends-fav-item-header-hover-details-avatar-word">
+                                                    <h3>Mickey</h3>                            
+                                                    <p>Joined in Jul , 2022</p>
+                                                </div>
+                                            </div>
+    
+                                            <div class="friends-fav-item-header-hover-details-info">
+                                                
+                                                <div class="ff-follow-box">
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">14</div>
+                                                        Following 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">6</div>
+                                                        Followers 
+                                                    </div>
+                                                    <div class="ff-follow">
+                                                        <div class="ff-follow-count">5</div>
+                                                        Public Playlist
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3 class="friends-fav-item-header-word">Mickey's Favourite</h3>
+                                        <img class="friends-fav-item-header-pic" src="resources/fyp-main-page/fyp-friends-favourite/MickeyAvatar.png" alt="">
+                                    </div>
+                                    
+                                    <div class="friends-fav-item-thingy">
+    
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/SOS-album-image.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                Snooze
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                Sza
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/im-ok-david-tao.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                普通朋友
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                David Tao
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="friends-fav-item-thingy">
+                                        
+                                        <img class="friends-fav-item-thingy-pic" src="resources/fyp-main-page/fyp-friends-favourite/shun.png" alt="">
+                                        
+                                        <div class="friends-fav-item-thingy-details">
+                                            <div class="friends-fav-item-thingy-details-song-name">
+                                                瞬
+                                            </div>
+                                            <div class="friends-fav-item-thingy-details-song-artist">
+                                                鄭潤澤
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-box">
+                <div class="footer-about-us-box">
+                    <p class="footer-content-title">About us</p>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Arkar Kyaw</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Chan Yong Hang</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Chang Zi Kai</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Peti Moe Naing</button>
+                    </a>
+                </div>
+    
+                <div class="footer-contact-us-box">
+                    <p class="footer-content-title">Contact Us</p>
+                    <p class="footer-content">groovy11@gmail.com</p>
+                    <p class="footer-content">+60 1111111</p>
+                </div>
+
+                <div class="footer-premium-plan-box">
+                    <p class="footer-content-title">Premium Plans</p>
+                    <a class="footer-content" href="get-premium-form.html">Trial Plan</a>
+                    <a class="footer-content" href="get-premium-form.html">Monthly Plan</a>
+                    <a class="footer-content" href="get-premium-form.html">Yearly Plan</a>
+                </div>
+    
+                <div class="footer-find-us-box">
+                    <p class="footer-content-title">Find Us At</p>
+                    <img class="footer-social-media-icon" src="resources/footer-section/twitter.png" alt="">
+                    <img class="footer-social-media-icon" src="resources/footer-section/instagram.png" alt="">
+                    <img class="footer-social-media-icon" src="resources/footer-section/facebook.png" alt="">
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="mobile-size-current-playing-box">
+        <div class="mobile-size-current-playing-img-box">
+            <img class="mobile-size-current-playing-img" src="resources/timeline-section/current-playing-music-box/wave-song-image.jpeg" alt="">
+        </div>
+        <div class="mobile-size-current-playing-details-box">
+            <div class="mobile-size-current-playing-song-box">
+                <p class="mobile-size-current-playing-song">wave</p>
+            </div>
+            <div class="mobile-size-current-playing-artist-box">
+                <p class="mobile-size-current-playing-artist">wave to earth</p>
+            </div>
+        </div>
+        <div class="mobile-size-current-playing-more-icon-box">
+            <img class="mobile-size-current-playing-heart-icon" src="resources/timeline-section/current-playing-music-box/heart.png" alt="">
+            <img class="mobile-size-current-playing-more-icon" src="resources/general-icons/more-1d2235.png" alt="">
+        </div>
+    </div>
+
+    <div class="timeline-box">
+        <div class="current-playing-box">
+            <div>
+              <img class="current-playing-img" src="resources/timeline-section/current-playing-music-box/wave-song-image.jpeg" alt="">
+            </div>
+            <div class="current-playing-details">
+                <p class="current-playing-title">wave</p>
+                <a class="current-playing-artist" href="artist-profile-page.html">wave to earth</a>
+            </div>
+            <div>
+                <button>
+                  <img class="current-playing-heart" src="resources/timeline-section/current-playing-music-box/heart.png" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="timeline-right-section-box">
+            <div class="timeline-timebar-box">
+                <p class="timeline-time">4:10</p>
+                <img class="timeline-timebar-img" src="resources/timeline-section/selections/music-timeline.png" alt="">
+                <p class="timeline-time">4:30</p>
+            </div>
+
+            <div class="timeline-selection-box">
+                <div class="timeline-music-selection-box">
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/shuffle.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons timeline-selection-previous-button" src="resources/timeline-section/selections/next-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-play-button" src="resources/timeline-section/selections/play-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/next-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/repeat-once.png" alt="">
+                    </button>
+                </div>
+        
+                <div class="timeline-volume-box">
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/list.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/volume-up.png" alt="">
+                    </button>
+                    <button>
+                      <img class="volume-bar" src="resources/timeline-section/selections/volume-bar.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/fyp-js/recently-song-horizontal-scroll.js"></script>
+    <script src="scripts/fyp-js/top-trending-scroll.js"></script>
+    <script src="scripts/fyp-js/tm-scroll.js"></script>
+    <script src="scripts/fyp-js/bs-scroll.js"></script>
+    <script src="scripts/fyp-js/ff-scroll.js"></script>
+    <script src="scripts/fyp-js/forgotten-song-scroll.js"></script>
+    <script src="scripts/fyp-js/back-to-80s.js"></script>
+    <script src="scripts/fyp-js/best-song-for-party.js"></script>
+    <script src="scripts/fyp-js/forgotten-songs.js"></script>
+    <script src="scripts/fyp-js/new-release.js"></script>
+    <script src="scripts/fyp-js/Username.js"></script>
+    <script src="scripts/scroll/fyp-recent-played-scroll.js"></script>
+    <script src="scripts/scroll/fyp-top-trending-scroll.js"></script>
+    <script src="scripts/scroll/fyp-your-forgotten-scroll.js"></script>
+    <script src="scripts/scroll/fyp-topMix-scroll.js"></script>
+    <script src="scripts/scroll/fyp-best-party-scroll.js"></script>
+    <script src="scripts/scroll/fyp-friends-favourite-scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+.album-box, .playlist-box{
+    background-color: #24293d;
+    width: 22%;
+    border-radius: 8px;
+}
+
+.album-box2, .playlist-box2{
+    background-color: #24293d;
+    height: 230px;
+    border-radius: 8px;
+    display: none;
+}
+
+.album-container, .playlist-container{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+   
+}
+
+.album-container2, .playlist-container2{
+    display:flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.album-title, .playlist-title{ 
+    color: white;
+    font-weight: 1000;
+    font-size: 25px;
+    padding-bottom: 5px;  
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.album-name, .playlist-name{
+    color: white;
+    font-weight: 1000;
+    font-size: 38px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.album-image, .playlist-image{
+    width: 80%;
+    padding-bottom: 5px;
+
+}
+
+.album-artist-container, .playlist-user-container {
+    display:flex;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.playlist-userdesc-image-container, .album-artistdesc-image-container{
+    align-items: center;
+    display: flex;
+}
+
+.add-play-album-container {
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.play-playlist-container {
+    display:flex;
+    margin-top: 10px;
+    margin-left: 30px;
+    
+}
+
+.add-album{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.play-playlist, .play-album{
+    width: 50px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.menu-album, .menu-playlist{
+    width: 40px;
+    cursor: pointer;
+}
+
+
+
+.album-artist-image{
+    width: 30px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+
+.playlist-user-image{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.album-artist, .playlist-user{
+   color: white;
+   font-size: 17px;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+   white-space: nowrap;     
+   overflow: hidden;       
+   text-overflow: ellipsis;
+   align-content: space-around;
+   
+}
+
+.playlist-title-name-container, .album-title-name-container{
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+@media (max-width:1440px){
+
+    .playlist-user, .album-artist{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1270px){
+
+    .album-name, .playlist-name{
+        font-size: 33px;
+     }
+
+     .playlist-user, .album-artist{
+        font-size: 13px;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 1024px){
+
+    .album-title, .playlist-title{
+        font-size: 20px;
+    }
+   
+    .album-name, .playlist-name{
+       font-size: 27px;
+    }
+
+    .playlist-user-image, .album-artist-image{
+        width: 27px;
+        height:27px;
+        margin-left: 5px;
+     }
+
+
+    .album-box, .playlist-box{
+        display:none;
+    }
+
+    .album-box2, .playlist-box2{
+        display:flex;
+    }
+
+    .album-container, .playlist-container{
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    .album-image, .playlist-image{
+        width: 150px;
+        height: 150px;
+        padding-left: 20px;
+        padding-bottom: 0;
+    }
+
+    .play-playlist-container, .add-play-album-container{
+        margin: 0;
+        display: flex;
+    }
+  
+}
+
+
+@media (max-width: 746px){
+   
+    .album-title, .playlist-title{
+        font-size: 18px;
+    }
+    .album-name, .playlist-name{
+       font-size: 25px;
+    }
+
+    .playlist-user-image, .album-artist-image{
+        width: 25px;
+        height: 25px;
+        
+     }
+   
+     .playlist-user, .album-artist{
+        font-size: 12px;
+     }
+
+     .play-playlist, .play-album{
+        width: 40px;
+        height: 40px;
+     }
+
+     .add-album{
+        width: 27px;
+        height: 27px;
+     }
+
+     .menu-album, .menu-playlist{
+        width:33px;
+     }
+
+     
+}
+
+@media(max-width: 640px){
+    .album-artist-container{
+        flex-direction: column;
+    }
+
+    .album-artistdesc-image-container{
+        padding-top: 10px;
+    }
+
+    .album-artist-image{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px){
+   
+    .album-title, .playlist-title{
+        font-size: 16px;
+    }
+    .album-name, .playlist-name{
+       font-size: 23px;
+    }
+
+    .playlist-user-image, .album-artist-image{
+        width: 23px;
+        height: 23px;
+        
+     }
+   
+     .playlist-user, .album-artist{
+        font-size: 10px;
+     }
+
+     .play-playlist, .play-album{
+        width: 30px;
+        height: 30px;
+     }
+
+
+     .add-album{
+        width: 23px;
+        height: 23px;
+        
+     }
+
+     .menu-album, .menu-playlist{
+        width:25px;
+     }
+
+}
+
+@media (max-width: 540px){
+
+    .album-title, .playlist-title{
+        font-size:14px;
+    }
+
+    .album-name, .playlist-name{
+        font-size: 21px;
+    }
+
+    .playlist-user{
+        max-width: 80px;
+    }
+
+    .album-artist{
+        max-width: 100px;
+    }
+
+    .playlist-user-container{
+        flex-direction: column;
+   }
+
+   .playlist-userdesc-image-container{
+        padding-top: 10px;
+   }
+}
+
+@media(max-width: 450px){
+    .album-name{
+        font-size: 18px;
+    }
+
+    .album-artist{
+        max-width: 50px;
+    }
+}
+
+
+@media (max-width: 430px){
+     
+    .album-artist-container, .playlist-user-container{
+        flex-direction: row;
+    }
+
+    .playlist-userdesc-image-container, .album-artistdesc-image-container{
+        padding: 0;
+    }
+
+    .album-name, .playlist-name{
+        font-size: 17px;
+    }
+
+
+    .album-box2, .playlist-box2{
+        margin-top: 10px;
+        height: 180px;
+    }
+
+    .album-artist-image{
+        margin-left: 5px;
+    }
+}
+
+
+@media (max-width: 404px){
+   
+    .playlist-user{
+        max-width: 35px;
+    }
+
+    .album-artist{
+        max-width: 100px;
+    }
+
+    .album-artist-container{
+        flex-direction: column;
+        
+    }
+
+    .album-artistdesc-image-container{
+        padding-top: 10px;
+    }
+
+    .album-artist-image{
+        margin-left: 0;
+    }
+   
+}
+
+
+
+
+

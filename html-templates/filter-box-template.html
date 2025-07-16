@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/filter-buttons.css"> <!--remember to link this-->
+
+    <style>
+        /*ignore styles below, it's applied only for this page*/
+        .title-filter-box{
+            width: 50%;
+        }
+
+        button{
+            border: none;
+        }
+
+        .filter-box{
+            background-color: red;
+        }
+
+        .filter-title-box{
+            background-color: blue;
+        }
+
+        p{
+            margin: 0;
+            padding-bottom: 30px;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body> <!--u can add extra class/id names but do not modify those i written-->
+    <div class="title-filter-box">
+        <p class="filter-title-box">Title for the section</p> <!--change it to ur own title-->
+        <div class="filter-box">
+            <button class="filter-buttons" id="current-selected-filter">Best Related</button> <!--the button with id="current-selected-filter" must always be the first-->
+            <button class="filter-buttons">See All</button> <!--if u need more buttons just copy&paste and change the content of button-->
+        </div>
+    </div>
+</body>
+</html>

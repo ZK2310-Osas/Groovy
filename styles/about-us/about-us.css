@@ -1,0 +1,146 @@
+
+
+body {
+    overflow-x: hidden; 
+}
+
+
+.content-container{
+    padding: 80px;
+}
+
+.about-us-container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+
+
+.about-us-header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-header-backgorund{
+    width: 100%;
+    object-fit: cover;
+    height: 600px;
+    filter: brightness(50%);
+    object-position: bottom;
+    border-radius: 10px;
+}
+
+.about-us-header-details{
+    top: 10%;
+    left: 8%;
+    position: absolute;
+    color: white;
+}
+
+.groovy-team{
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.about-us-header-topic{
+    font-size: 70px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.about-us-header-desc{
+    width: 100%;
+    font-size: 20px;
+    margin: 30px;
+    max-width: 50%;
+    line-height: 1.7;
+}
+
+.about-us-after-header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 50px;
+    margin-block: 7rem;
+}
+
+.about-us-after-header-word{
+    justify-content:center ;
+    color: #c9c9c9;
+    font-size: 20px;
+    max-width: 45%;
+    margin-top: 20px;
+
+
+}
+
+.who-we-are-word{
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 60px;
+
+}
+
+.who-we-are{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 30px;
+    margin-bottom: 70px;
+    color: white;
+    text-align: center;
+}
+
+.about-us-info-1{
+    border-radius: 14px;
+    background-color: #010535;
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    margin-block: 12rem;
+    width: auto;
+    height: 10%;
+    align-items: center;
+    opacity: 1;
+}
+
+.about-us-info-1-word{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    margin-left: 7%;
+    margin-right: 2%;
+}
+
+.about-us-info-1-word-topic{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.about-us-info-1-word-desc{
+    color: #c9c9c9;
+    font-size: 25px;
+
+}
+
+#about-us-vid{
+    margin: 3%;
+    width: 45%;
+    height: 40%;
+    border-radius: 15px;
+}
+
+@media (max-width: 1440px){
+    .content-container{
+        padding: 40px;
+    }
+}
+
+@media (max-width:425px){
+    .content-container{
+        padding: 20px;
+    }
+}

@@ -1,0 +1,203 @@
+.top-trending-container{
+    margin: 0;
+    padding: 10px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowarp;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    margin-bottom: 120px;
+}
+
+.top-trending-topic{
+    margin-left: 0px;
+    margin-top: 1px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.top-trending{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    margin: 20px;
+    margin-top: 0;
+    margin-left: 0;
+    transition: 0.5s all ease-out;
+    height: 320px;
+    cursor: pointer;
+}
+
+.top-trending-item{
+    position: relative;
+    margin: 15px;
+    width: 420px;
+    height: 280px;
+    margin-left: 0px;
+    /*margin-right: 50px;*/
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.top-trending-pic{
+    width: 410px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.top-trending-song{
+    width: 220px;
+    position: absolute;
+    bottom: 3px; 
+    left: 44%;
+}
+
+.top-trending-song-topic{
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 5px;
+}    
+
+.top-trending-song-item{
+    margin-inline: 2px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.top-trending-song-item:hover {
+    transform: scale(1.1); 
+    
+}
+
+.top-trending-song-item:hover .top-trending-song-pic{
+    animation: toptrendrotate 2s linear infinite;
+}
+
+@keyframes toptrendrotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.top-trending-song-name{
+    color: white;
+    font-size: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    width: 170px;   
+}
+
+.top-trending-song-artist{
+    color: #ccd0cf;
+    font-size: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.top-trending-song-pic{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    float: left;
+
+}
+
+.top-trending-show-more{
+    color: #ccd0cf;
+    margin: 0.5px;
+    font-size: 12px;
+    margin-left: 33%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.top-trending-show-more:hover{
+    transform: scale(1);
+}
+
+.tt-horizontal-scroll{
+    width: auto;
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tt-horizontal-scroll .tt-btn-scroll{
+    background-color: rgba(73, 73, 73, 0.75);
+    color: #999;
+    box-shadow:0 0 10px #999;
+    width: 30px;
+    height: 30px;
+    padding:5px 8px;
+    border: 0;
+    border-radius: 50%;
+    margin: 0 20px;
+    z-index: 6;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+/* Styles for the left scroll button */
+#tt-btn-scroll-left {
+    background-image: url('left-button.png'); /* Replace with your actual image path */
+    background-size: contain;    /* Scale the image to fit the button */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-position: center;  /* Centers the image in the button */
+    width: 40px; /* Adjust width and height to fit image */
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles for the right scroll button */
+#tt-btn-scroll-right {
+    background-image: url('right-button.png'); /* Replace with your actual image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+/* media query for top-trending */
+@media (max-width: 618px){
+    .top-trending-container{
+        margin-top: 20px;
+    }
+
+    .top-trending-topic{
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,320 @@
+.friends-fav-container{
+    margin-bottom: 50px;
+    overflow: auto;
+    align-items: center;
+}
+
+.friends-fav-topic{
+    margin: 0;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.friends-fav-item-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transition: 0.5s all ease-out;
+}
+
+.friends-fav-item{
+    background-color: #414040;
+    width: 500px;
+    border-radius: 15px;
+    margin-right: 40px;
+    transition: 1s all ease;
+}
+
+.friends-fav-item-header{
+    display: flex;
+    margin: 20px;
+    margin-left: 30px;
+    height: 50px;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.friends-fav-item-header-word{
+    width: 330px;
+    margin: 5px;
+    margin-left: 25px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold
+}
+
+.friends-fav-item-header-pic{
+    float: right;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.friends-fav-item-thingy{
+    margin: 20px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-left: 40px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.friends-fav-item-thingy-pic{
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.friends-fav-item-thingy-details{
+    margin-left: 10px;
+}
+
+.friends-fav-item-thingy-details-song-name{
+    color: white;
+    font-size: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    width: 170px;
+}
+
+.friends-fav-item-thingy-details-song-artist{
+    color: #ccd0cf;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.friends-fav-item-thingy:hover {
+    transform: scale(1.1); 
+    
+}
+
+.friends-fav-item-thingy:hover .friends-fav-item-thingy-pic{
+    animation: friendsfavrotate 2s linear infinite;
+}
+
+@keyframes friendsfavrotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.friends-fav-item-header:hover .friends-fav-item-header-hover-details {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 10;
+}
+
+.friends-fav-item-header:hover .friends-fav-item-header-word,
+.friends-fav-item-header:hover .friends-fav-item-header-pic,
+.friends-fav-item-header:hover ~ .friends-fav-item-thingy {
+    opacity: 0;
+}
+
+
+.friends-fav-item-header-hover-details{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 350px;
+    align-items: center;
+    margin-left: 50px;
+    bottom: 20%;
+    opacity: 0;
+    z-index: 5;
+    transform: translateY(900px);
+    transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.friends-fav-item-header-hover-details-avatar-box{
+    position: relative;
+    display: inline-flex;
+    font-size: 40px;
+    color: white;
+    align-items: center;
+    margin: 0px;
+    width: 345px;
+    left: -5%;
+    height: 110px;
+}
+
+.friends-fav-item-header-hover-details-avatar{
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin: 15px;
+    border-radius: 50%;
+
+}
+
+.friends-fav-item-header-hover-details-avatar-word{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.friends-fav-item-header-hover-details-avatar-word h3{
+    font-size: 35px;
+    margin: 0;
+}
+
+.friends-fav-item-header-hover-details-avatar-word p{
+    font-size: 20px;
+    color: #ccd0cf;
+    margin: 0px;
+    
+}
+
+.friends-fav-item-header-hover-details-info{
+    display: flex;
+    margin: 0px;
+    align-items: flex-start;
+
+}
+
+
+.ff-follow-box{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    align-items: flex-start;
+    color: white;
+    justify-content: center;
+}
+
+.ff-follow-count{
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    text-align: center;
+    width: 72px;
+}
+
+
+.ff-follow{
+    font-weight: 500;
+    margin-top: 4px;
+    margin: 20px;
+    color: #ccd0cf;
+    text-align: center;
+}
+
+.ff-horizontal-scroll{
+    width: auto;
+    height: 480px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ff-horizontal-scroll .ff-btn-scroll{
+    background-color: rgba(73, 73, 73, 0.75);
+    color: #999;
+    box-shadow:0 0 10px #999;
+    width: 30px;
+    height: 30px;
+    padding:5px 8px;
+    border: 0;
+    border-radius: 50%;
+    margin: 0 20px;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+/* Styles for the left scroll button */
+#ff-btn-scroll-left {
+    background-image: url('left-button.png'); /* Replace with your actual image path */
+    background-size: contain;    /* Scale the image to fit the button */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-position: center;  /* Centers the image in the button */
+    width: 40px; /* Adjust width and height to fit image */
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles for the right scroll button */
+#ff-btn-scroll-right {
+    background-image: url('right-button.png'); /* Replace with your actual image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 618px){
+    .ff-horizontal-scroll{
+        height: 370px;
+    }
+
+    .friends-fav-container{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .friends-fav-topic{
+        margin-bottom: 10px;
+    }
+
+    .friends-fav-item{
+        width: 380px;
+    }
+
+    .friends-fav-item-header-word{
+        font-size: 27px;
+        margin-left: 0;
+    }
+
+    .best-song-for-party-item-pic1{
+        width: 170px;
+        height: 170px;
+    }
+
+    .best-song-for-party-item-pic2{
+        width: 170px;
+        height: 170px;
+    }
+
+    .friends-fav-item-header-hover-details{
+        margin-left: 0;
+
+    }
+
+    .ff-follow{
+        margin: 10px;
+    }
+
+    .ff-follow-count{
+        margin: 6px;
+    }
+}

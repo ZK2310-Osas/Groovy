@@ -1,0 +1,29 @@
+.content-part {
+  background-color: #1d2235;
+  border-radius: 8px;
+  flex: 1;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#content-part{
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
+}
+
+@media(max-width: 768px){
+  #content-part{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media(max-width: 375px){
+  #content-part{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+

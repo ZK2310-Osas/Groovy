@@ -1,0 +1,283 @@
+.current-playing-img {
+  width: 52px;
+  border-radius: 5px;
+}
+
+.current-playing-title {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.current-playing-artist,
+.timeline-time {
+  color: #ccd0cf;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.current-playing-heart {
+  width: 20px;
+}
+
+.current-playing-box {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 10px;
+  width: 15%;
+}
+
+.current-playing-details {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.timeline-selection-buttons {
+  width: 16px;
+  margin-right: 15px;
+}
+
+.timeline-play-button {
+  width: 35px;
+  margin-right: 15px;
+}
+
+.timeline-music-selection-box {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.volume-bar {
+  width: 100px;
+}
+
+.timeline-volume-box {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-selection-box {
+  display: flex;
+  flex: 1;
+
+}
+
+.timeline-music-selection-box {
+  justify-self: center;
+}
+
+.timeline-volume-box {}
+
+.timeline-box {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 84px;
+  background-color: #1d2235;
+  border-radius: 8px 8px 0 0;
+}
+
+.timeline-timebar-box {
+  display: flex;
+}
+
+.timeline-timebar-img {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100%;
+  height: 10px;
+}
+
+.timeline-right-section-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 10px;
+  margin-left: 0.6%;
+}
+
+/*mobile size current playing box*/
+.mobile-size-current-playing-box {
+  display: none;
+}
+
+
+/*media query*/
+@media (max-width: 1440px) {
+
+  /*laptop size*/
+  .current-playing-details {
+    margin-left: 12px;
+  }
+
+  .current-playing-title {
+    font-size: 16px;
+  }
+
+  .current-playing-box {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .current-playing-img {
+    display: none;
+  }
+
+  .current-playing-box {
+    padding: 0;
+  }
+
+  .timeline-timebar-img {
+    width: 820px;
+  }
+}
+
+@media (max-width: 958px) {
+  .timeline-timebar-img {
+    width: 760px;
+  }
+
+  .current-playing-heart {
+    width: 18px;
+  }
+}
+
+@media (max-width:768px) {
+  .timeline-timebar-img {
+    width: 580px;
+  }
+}
+
+@media (max-width:430px) {
+  .current-playing-box {
+    display: none;
+  }
+
+  .timeline-timebar-img {
+    width: 375px;
+  }
+
+  .timeline-volume-box {
+    display: none;
+  }
+
+  .mobile-size-current-playing-box {
+    display: flex;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    background-color: #e6f2f4;
+    /*or #fff9c7*/
+    opacity: 0.9;
+    align-items: center;
+    padding: 6px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .mobile-size-current-playing-more-icon {
+    width: 20px;
+  }
+
+  .mobile-size-current-playing-heart-icon {
+    width: 20px;
+    margin-right: 20px;
+  }
+
+  .mobile-size-current-playing-img {
+    width: 45px;
+  }
+
+  .mobile-size-current-playing-details-box {
+    flex: 1;
+  }
+
+  .mobile-size-current-playing-img-box {
+    padding-left: 8px;
+    padding-right: 14px;
+  }
+
+  .mobile-size-current-playing-song {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .mobile-size-current-playing-song-box {
+    margin-bottom: 5px;
+  }
+
+  .mobile-size-current-playing-artist {
+    font-size: 12px;
+  }
+
+  .mobile-size-current-playing-more-icon-box {
+    margin-right: 8px;
+  }
+
+  .timeline-box {
+    height: 60px;
+    background-color: #24293d;
+    border-radius: 0;
+    padding-bottom: 3px;
+  }
+}
+
+@media(max-width: 375px) {
+  .timeline-timebar-img {
+    width: 315px;
+  }
+
+  .timeline-play-button {
+    width: 28px;
+  }
+
+  .timeline-box {
+    height: 50px;
+    border-radius: 0;
+  }
+
+  .mobile-size-current-playing-box {
+    bottom: 50px;
+    opacity: 0.9;
+    padding: 4px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .mobile-size-current-playing-img-box {
+    padding-left: 2px;
+  }
+
+  .mobile-size-current-playing-img {
+    width: 38px;
+  }
+
+  .mobile-size-current-playing-song {
+    font-size: 13px;
+  }
+
+  .mobile-size-current-playing-song-box {
+    margin-bottom: 2px;
+  }
+
+  .mobile-size-current-playing-artist {
+    font-size: 12px;
+  }
+
+  .mobile-size-current-playing-more-icon {
+    width: 16px;
+  }
+
+  .mobile-size-current-playing-heart-icon {
+    width: 16px;
+    margin-right: 18px;
+  }
+
+}

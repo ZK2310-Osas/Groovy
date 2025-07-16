@@ -1,0 +1,138 @@
+
+.artist-profile-future-events-box{
+    margin-top: 100px;
+}
+
+.artist-profile-future-events-flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+
+.artist-profile-future-events-content-gridbox{
+    width: 280px;
+    display: grid;
+    grid-template-rows: 168px 170px;
+    margin-right: 3%;
+}
+
+.artist-profile-future-events-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.artist-profile-future-events-details-flexbox{
+    background-color: #24293d;
+    padding: 18px;
+    border-radius: 0 0 8px 8px;
+}
+
+.artist-profile-future-events-title{
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ccd0cf;
+}
+
+.artist-profile-future-events-date{
+    font-size: 12px;
+    color: #ccd0cf;
+}
+
+.artist-profile-future-events-details-button{
+    border: none;
+    background-color: #0279ff;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.artist-profile-future-events-date-flexbox{
+    display: flex;
+    align-items: center;
+}
+
+.artist-profile-future-events-calender-img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.artist-profile-future-events-details-flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-profile-future-events-details-box{
+    flex-grow: 1;
+}
+
+.artist-profile-future-events-details-button-box{
+    padding-top: 20px;
+}
+
+/*media query*/
+
+@media (max-width:1024px){
+    .artist-profile-future-events-flexbox{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .artist-profile-future-events-content-gridbox{
+        width: 90%;
+    }
+}
+
+@media (max-width:430px){
+    .artist-profile-future-events-flexbox{
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+
+    .artist-profile-future-events-content-gridbox{
+        width: 100%;
+    }
+
+    .artist-profile-future-events-title{
+        font-size: 12px;
+    }
+
+    .artist-profile-future-events-date{
+        font-size: 11px;
+    }
+
+    .artist-profile-future-events-calender-img{
+        width: 18px;
+    }
+}
+
+@media (max-width:375px){
+    .artist-profile-future-events-content-gridbox{
+        width: 100%;
+        grid-template-rows: 130px 150px;
+    }
+
+    .artist-profile-future-events-title{
+        font-size: 11px;
+    }
+
+    .artist-profile-future-events-date{
+        font-size: 10px;
+    }
+
+    .artist-profile-future-events-calender-img{
+        width: 16px;
+    }
+
+    .artist-profile-future-events-box{
+        margin-top: 70px;
+    }
+
+    .artist-profile-future-events-details-button{
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+}

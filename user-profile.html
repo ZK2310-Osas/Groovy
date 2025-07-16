@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles/header-section.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/library-section.css">
+    <link rel="stylesheet" href="styles/timeline-section.css">
+    <link rel="stylesheet" href="styles/footer-section.css">
+    <link rel="stylesheet" href="styles/content-section.css">
+    <link rel="stylesheet" href="styles/scroll.css">
+    <link rel="stylesheet" href="styles/user-profile-page/user-profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        .favsong1{
+            background-image: url(resources/album-page/silenthill_playlist9.png);
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <div class="header-hamburger-icon-box">
+            <img class="header-hamburger-icon" src="resources/header-section/hamburger-white.png" alt="">
+        </div>
+        <div class="header-logo-section">
+            <a href="main-fyp.html">
+                <button class="header-logo-button">
+                    <img class="header-logo" src="resources/header-section/logo.png" alt="">
+                    <div class="tooltip">Home</div>
+                  </button>
+            </a>
+            <a href="main-fyp.html">
+                <button>
+                    <p class="header-logo-name">Groovy</p>
+                </button>
+            </a>
+        </div>
+
+        <div class="header-right-section">
+            <div class="nav-box">
+                <a class="nav-home-link" href="main-fyp.html">
+                    <button class="nav-button">Home</button>
+                </a>
+                <a class="nav-discover-link" href="discover-page.html">
+                    <button class="nav-button">Discover</button>
+                </a>
+                <a class="nav-about-us-link" href="about-us.html">
+                    <button class="nav-button">About Us</button>
+                </a>
+                <a class="nav-get-premium-link" href="get-premium-form.html">
+                    <button class="get-premium-button">
+                        Upgrade? 
+                    </button>
+                </a>
+            </div>
+            <div class="header-search-bar-section">
+                <input id="search-bar" type="text" placeholder="What's poppin?">
+    
+                <button class="header-search-button">
+                  <a href=""></a>
+                  <img class="header-search-icon" src="resources/header-section/search.png" alt="">
+                  <div class="tooltip">Search</div>
+                </button>
+                
+                <button class="header-search-bar-idea-button">
+                  <a href=""></a>
+                  <img class="header-search-bar-idea-icon" id="idea-icon-b4-hover" src="resources/header-section/idea.png" alt="">
+                  <div class="tooltip">Ideas?</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-user-icon-box">
+            <img class="header-user-icon" src="resources/header-section/alien-user-profile.png" alt="">
+            <img class="header-user-online-dot" src="resources/header-section/online-dot.png" alt="">
+        </div>
+    </div>
+    <div class="middle-box">
+        <div class="library-box">
+            <div class="user-section">
+                <div class="user-profile-box">
+                    
+                    <button class="header-user-button">
+                        <a href="user-profile.html">
+                            <img class="user-profile-logo" src="resources/header-section/alien-user-profile.png" alt="">
+                            <div class="tooltip">Profile</div>
+                        </a>
+                    </button>
+                    <img class="user-profile-online" src="resources/header-section/online-dot.png" alt="">
+                </div>
+                
+                    <button class="username-button">
+                        <a href="user-profile.html">
+                            <div class="user-details-box">
+                                <p class="username"><span id="profile-name"></span></p>
+                                <div class="user-premium-status-box">
+                                    <p class="user-premium-status">Not member</p>
+                                    <img class="premium-upgrade-button" src="resources/header-section/up-arrow-white.png" alt="">
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </button>
+                
+                
+                <div>
+                    <button class="user-profile-more-button">
+                        <img class="user-profile-more-icon" src="resources/general-icons/more.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="library-title-box">
+                <p class="library-title">Library</p>
+                <button class="library-title-add-button">
+                    <img class="library-title-add-icon" src="resources/library-section/add.png" alt="">
+                </button>
+                <button class="library-title-expand-button">
+                    <img class="library-title-expand-icon" src="resources/library-section/expand-arrows.png" alt="">
+                </button>
+            </div>
+        
+            <div class="library-sort-search-box">
+                <p class="library-sort">sort by.</p>
+                <button class="library-search-button">
+                    <img class="library-search-icon" src="resources/library-section/search.png" alt="">
+                </button>
+            </div>
+        
+            <div class="library-items-box">
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        <img class="library-playing-img" src="resources/library-section/pause.png" alt="">
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/album-page/coldplay_parachutes.png" alt="">
+                        </a>
+                        <div class="tooltip">parachutes</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" id="current-playing-playlist-title" href="album-page.html">Parachutes</a> <!--change this later-->
+                        <p class="library-playlist-info" id="current-playing-playlist-info">Album | 10 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        2.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/moodyy-playlist-image.png" alt="">
+                        </a>
+                        <div class="tooltip">moodyyy</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">moodyyy</a>
+                        <p class="library-playlist-info">Playlist | 15 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        3.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="playlist-page.html">
+                          <img class="library-playlist-image" src="resources/playlist-page/silenthillfavorites.png" alt="">
+                        </a>
+                        <div class="tooltip">silent hill favorites</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="playlist-page.html">Silent hill favorites</a>
+                        <p class="library-playlist-info">Playlist | 16 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        4.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/requiem-album-image.png" alt="">
+                        </a>
+                        <div class="tooltip">Requiem</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">Requiem</a>
+                        <p class="library-playlist-info">Album | 13 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        5.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section//d4vd-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">d4vd</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">d4vd</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        6.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/retro-playlist-image.png" alt="">
+                        </a>
+                        <div class="tooltip">retro</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">retro</a>
+                        <p class="library-playlist-info">Playlist | 28 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        7.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/SOS-album-image.png" alt="">
+                        </a>
+                        <div class="tooltip">SOS</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">SOS</a>
+                        <p class="library-playlist-info">Album | 23 songs</p>
+                    </div>
+                </div>
+        
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        8.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section/xg-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">XG</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">XG</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+        
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        9.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section/raveena-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">Raveena</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">Raveena</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+
+            </div>
+    
+            <div class="current-enlarged-playing-song-box">
+                <img class="current-enlarged-playing-song-image" src="resources/library-section/indie-pop-playlist-image.png" alt="">
+                <button class="current-playing-collapse-button">
+                    <img class="current-playing-collapse-img" src="resources/library-section/expand-gray.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="content-part" id="content-part">
+
+            <div class="user-profile-head">
+                <div class="user-profile">
+                    <div class="profile-header">
+                        <span class="profile-header" id="profile-profile-name"></span>'s Profile
+                    </div>
+                    <div class="user-details">            
+                        <img src="resources/header-section/alien-user-profile.png" class="userpfp">
+                        <div class="userstats-box">
+                            <div class="userstats"> 
+                                <div class="userstats-info"><h2>3</h2> follower</div>
+                                <div class="userstats-info"><h2>13</h2> following</div>
+                                <div class="userstats-info" id="playlist-hidden"><h2>9</h2> playlists</div>
+                            </div>
+                            <p>nothing much - this is this and that is that</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="favorite-songs">
+                    <div class="favsonghead">
+                        <span class="profile-header" id="fav-song-profile-name"></span>'s favorite songs
+                    </div>
+                    <div class="favsong-container">
+                        <div class="favsong" style="background-image: url(resources/user-profile-page/user-favsongs/akrymok-yourenothere.png);">
+                            <div class="favsong-text">You're not here</div>
+                        </div>
+                        <div class="favsong" style="background-image: url(resources/user-profile-page/user-favsongs/coldplay-yellow.png);">
+                            <div class="favsong-text">Yellow</div>
+                        </div>
+                        <div class="favsong" style="background-image: url(resources/user-profile-page/user-favsongs/crumb-fall-down.png);">
+                            <div class="favsong-text">Fall Down</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-playlist-container">
+                <h1 class="liststitle"><span class="profile-header" id="playlist-profile-name"></span>'s playlists</h1>
+                <div class="playlistsList-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul> 
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/rnb.jpg);">
+                                <div class="playlist-text">
+                                    r&b
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/wave-wte.jpeg);">
+                                <div class="playlist-text">
+                                    indie pop
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/charlieburg.jpg);">
+                                <div class="playlist-text">
+                                    moodyyy
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/playlist-retro.jpg);">
+                                <div class="playlist-text">
+                                    retro
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/cathedralofbones.png);">
+                                <div class="playlist-text">
+                                    DnB JUNGLE BEATS
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/jhendrix.jpg);">
+                                <div class="playlist-text">
+                                    psych-rock
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/jhendrix.jpg);">
+                                <div class="playlist-text">
+                                    GOOD VIBES<br>ONLY
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/motfd.png);">
+                                <div class="playlist-text">
+                                    日本の歌もの
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="playlist" style="background-image: url(resources/user-profile-page/user-playlists/silenthill_playlist6.png);"> 
+                                <div class="playlist-text">
+                                    silent chill
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                  </div>
+            </div>
+            <!--updated horizontal scrollbar-->
+            <div class="user-artist-container">
+                <h1 class="liststitle"><span class="profile-header" id="follow-artist-profile-name"></span>'s followed artists</h1>
+                <div class="artists-list-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/akrymok.png);">
+                                <div class="artist-text">
+                                    Akira Yamaoka
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/wavetoearth.png);">
+                                <div class="artist-text">
+                                    wave to earth
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/casiopea.jpg);">
+                                <div class="artist-text">
+                                    Casiopea
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/coldplay.png);">
+                                <div class="artist-text">
+                                    Coldplay
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/sally.png);">
+                                <div class="artist-text">
+                                    sally
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/xg-profile.jpeg);">
+                                <div class="artist-text">
+                                    xg
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/raveena-profile.jpeg);">
+                                <div class="artist-text">
+                                    raveena
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/mili.png);">
+                                <div class="artist-text">
+                                    Mili
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/d4vd-profile.jpeg);">
+                                <div class="artist-text">
+                                    d4vd
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/deadhorses.jpg);">
+                                <div class="artist-text">
+                                    DJ <br> DEADHORSES 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/joji.png);">
+                                <div class="artist-text">
+                                    Joji
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/crumb.png);">
+                                <div class="artist-text">
+                                    crumb
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="artist" style="background-image: url(resources/user-profile-page/user-favartists/julie2.png);">
+                                <div class="artist-text">
+                                    julie
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="user-friend-container">
+                <h1 class="liststitle"><span class="profile-header" id="friends-profile-name"></span>'s Close friends</h1>
+                <div class="friends-list">
+                    <a href="user-profile.html"></a>
+                    <div class="friend" id="dino">
+                        <img class="friend-img" src="resources/user-profile-page//user-friends/dinosaur-user-profile.png" alt="friend-img">
+                        <div class="friend-text">
+                            Dino
+                        </div>
+                    </div>
+                    <a href="user-profile.html"></a>
+                    <div class="friend">
+                        <img class="friend-img" src="resources/user-profile-page/user-friends/MickeyAvatar.png" alt="friend-img">
+                        <div class="friend-text">
+                            Mickey
+                        </div>
+                    </div>
+                    <a href="user-profile.html"></a>
+                    <div class="friend" id="duck">
+                        <img class="friend-img" src="resources/user-profile-page/user-friends/duck-user-profile.png" alt="friend-img">
+                        <div class="friend-text">
+                            Duck
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="footer-box">
+                <div class="footer-about-us-box">
+                    <p class="footer-content-title">About us</p>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Arkar Kyaw</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Chan Yong Hang</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Chang Zi Kai</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Peti Moe Naing</button>
+                    </a>
+                </div>
+    
+                <div class="footer-contact-us-box">
+                    <p class="footer-content-title">Contact Us</p>
+                    <p class="footer-content">groovy11@gmail.com</p>
+                    <p class="footer-content">+60 1111111</p>
+                </div>
+
+                <div class="footer-premium-plan-box">
+                    <p class="footer-content-title">Premium Plans</p>
+                    <a class="footer-content" href="get-premium-form.html">Trial Plan</a>
+                    <a class="footer-content" href="get-premium-form.html">Monthly Plan</a>
+                    <a class="footer-content" href="get-premium-form.html">Yearly Plan</a>
+                </div>
+    
+                <div class="footer-find-us-box">
+                    <p class="footer-content-title">Find Us At</p>
+                    <img class="footer-social-media-icon" src="resources/footer-section/twitter.png" alt="">
+                    <img class="footer-social-media-icon" src="resources/footer-section/instagram.png" alt="">
+                    <img class="footer-social-media-icon" src="resources/footer-section/facebook.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-size-current-playing-box">
+        <div class="mobile-size-current-playing-img-box">
+            <img class="mobile-size-current-playing-img" src="resources/timeline-section/current-playing-music-box/wave-song-image.jpeg" alt="">
+        </div>
+        <div class="mobile-size-current-playing-details-box">
+            <div class="mobile-size-current-playing-song-box">
+                <p class="mobile-size-current-playing-song">wave</p>
+            </div>
+            <div class="mobile-size-current-playing-artist-box">
+                <p class="mobile-size-current-playing-artist">wave to earth</p>
+            </div>
+        </div>
+        <div class="mobile-size-current-playing-more-icon-box">
+            <img class="mobile-size-current-playing-heart-icon" src="resources/timeline-section/current-playing-music-box/heart.png" alt="">
+            <img class="mobile-size-current-playing-more-icon" src="resources/general-icons/more-1d2235.png" alt="">
+        </div>
+    </div>
+
+    <div class="timeline-box">
+        <div class="current-playing-box">
+            <div>
+              <img class="current-playing-img" src="resources/timeline-section/current-playing-music-box/wave-song-image.jpeg" alt="">
+            </div>
+            <div class="current-playing-details">
+                <p class="current-playing-title">wave</p>
+                <a class="current-playing-artist" href="artist-profile-page.html">wave to earth</a>
+            </div>
+            <div>
+                <button>
+                  <img class="current-playing-heart" src="resources/timeline-section/current-playing-music-box/heart.png" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="timeline-right-section-box">
+            <div class="timeline-timebar-box">
+                <p class="timeline-time">4:10</p>
+                <img class="timeline-timebar-img" src="resources/timeline-section/selections/music-timeline.png" alt="">
+                <p class="timeline-time">4:30</p>
+            </div>
+
+            <div class="timeline-selection-box">
+                <div class="timeline-music-selection-box">
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/shuffle.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons timeline-selection-previous-button" src="resources/timeline-section/selections/next-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-play-button" src="resources/timeline-section/selections/play-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/next-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/repeat-once.png" alt="">
+                    </button>
+                </div>
+        
+                <div class="timeline-volume-box">
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/list.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/volume-up.png" alt="">
+                    </button>
+                    <button>
+                      <img class="volume-bar" src="resources/timeline-section/selections/volume-bar.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/scroll/user-followed-artist-scroll.js"></script>
+    <script src="scripts/scroll/user-profile-playlist-scroll.js"></script>
+    <script src="scripts/fyp-js/Username.js"></script>
+
+</body>
+</html>

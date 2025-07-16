@@ -1,0 +1,46 @@
+.title-filter-box{
+    display: flex;
+  }
+  
+.filter-title-box{
+    flex: 1;
+}
+
+.filter-buttons{
+    background-color: #1c3869;
+    color: #ccd0cf;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+#current-selected-filter{
+    color: white;
+    background-color: #0279ff;
+}
+
+/*media query*/
+ @media (max-width: 430px){
+  .title-filter-box{
+    display: inline;
+  }
+
+  #current-selected-filter{
+    margin-left: 0;
+  }
+
+  .filter-title-box{
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+
+  .filter-box{
+    margin-bottom: 15px;
+  }
+
+  .filter-buttons{
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+}

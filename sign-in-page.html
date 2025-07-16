@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Groovy</title>
+    <link rel="stylesheet" href="styles/sign-in-page.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="icon" href="resources/header-section/logo.png"type="image/x-icon" />
+
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="resources/sign-in-page/signin-background.mp4" type="video/mp4">
+    </video>
+    <div id="loading-animation" class="loading-animation" style="display: none;">
+        <img src="resources/sign-in-page/habbo-habbohotel.gif" alt="Loading...">
+        <div class="loading-animation-box">
+            <p class="loading-text">Music are warming up now<span class="loading-dots"></span></p>
+        </div>
+    </div>
+    <div class="content-box">
+        <div class="whole-container">    
+            <div class="lefty-part-container">
+                <div class="lefty-part-item">
+                    <div class="lefty-part-item-word1">Come <br>and <br>chill with</div>
+                    <h2>Groovy</h2>
+                    <div class="lefty-part-item-word2">Your Personal Music Streaming Website</div>
+                </div>
+                <img class="lefty-part-gif" src="resources/sign-in-page/music-unscreen.gif" alt="">
+            </div>
+            <div class="main-container">
+                <div class="form-box">
+                    <div class="signin-logo">
+                        <div class="signin-logo-box">
+                            <div class="signin-logo-pic">
+                                <img src="resources/sign-in-page/logo.png" alt="">
+                            </div>
+                            <h1>Groovy</h1>
+                        </div>
+                    </div>
+                    <!-- Login Form -->
+                    <form id="login-form" class="input-form active">
+                        <h2>Welcome Back</h2>
+                        <div class="login-detail-box">
+                            <input type="email" id="signin_email" placeholder="Email" class="input-field">
+                            <img class="icon-pic" src="resources/sign-in-page/user.png" alt="">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error Email</small>
+                        </div>
+                        <div class="login-detail-box">
+                            <input type="password" id="signin_password" placeholder="Password" class="input-field">
+                            <img src="resources/sign-in-page/hide.png" class="toggle-icon" id="toggleLoginPassword" alt="Show/Hide Password" onclick="togglePasswordVisibility('signin_password', 'toggleLoginPassword')">
+                            <img class="icon-pic" src="resources/sign-in-page/password.png" alt="">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Erorr Password</small>
+                        </div>
+                        <p class="forgot-password">Forgot Password?</p>
+                        <button type="submit" class="submit-btn">Login</button>
+                        <p class="switch-text">Don't have an account? <span onclick="switchToSignup()">Sign Up</span></p>
+                        <div class="use-other-signin-app">
+                            <div class="use-other-signin-app-icon">
+                                <img class="google-icon" src="resources/sign-in-page/google-square-icon-size_512.png" alt="">
+                                <img class="use-other-signin-app-icon-img" src="resources/sign-in-page/facebook.png" alt="">
+                                <img class="use-other-signin-app-icon-img" src="resources/sign-in-page/discord.png" alt="">
+                                <img class="use-other-signin-app-icon-img" src="resources/sign-in-page/steam-logo.png" alt="">
+                            </div>
+                            <p>or login with other platform</p>
+                        </div>
+                    </form>
+    
+            
+                    <!-- Signup Form -->
+                    <form id="signup-form" class="input-form">
+                        <h2>Sign Up</h2>
+                        <div class="login-detail-box">
+                            <input type="text" id="signup_username" placeholder="Username" class="input-field">
+                            <img class="icon-pic" src="resources/sign-in-page/user.png" alt="">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="login-detail-box">
+                            <input type="email" id="signup_email" placeholder="Email" class="input-field">
+                            <img class="icon-pic" src="resources/sign-in-page/email.png" alt="">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="login-detail-box">
+                            <input type="password" id="signup_password" placeholder="Password" class="input-field">
+                            <img src="resources/sign-in-page/hide.png" class="toggle-icon" id="toggleSignupPassword" alt="Show/Hide Password" onclick="togglePasswordVisibility('signup_password', 'toggleSignupPassword')">
+                            <img class="icon-pic" src="resources/sign-in-page/password.png" alt="">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <button type="submit" class="submit-btn">Sign Up</button>
+                        <p class="switch-text" id="signup-switch-text">Already have an account? <span onclick="switchToLogin()">Login</span></p>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <script src="scripts/fyp-js/sign-in.js"></script>  
+    <script src="https://kit.fontawesome.com/1e15889a8a.js" crossorigin="anonymous"></script>
+</body>
+</html>

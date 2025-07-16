@@ -1,0 +1,69 @@
+.artist-profile-title{
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.artist-profile-middle-box{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+}
+
+.content-box{
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 60px; /* remove this if u are going to apply flexbox - space-around */
+  box-sizing: border-box;
+}
+
+.artist-profile-background-box{
+  position: relative;
+}
+
+.artist-profile-merch-bckgrnd, .artist-profile-discography-bckgrnd, .artist-profile-on-tour-img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+.artist-profile-merch-bckgrnd-words, .artist-profile-discography-words{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 5vw;
+}
+
+/*media query*/
+@media (max-width:430px){
+  .content-box{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 50px; /* remove this if u are going to apply flexbox - space-around */
+  }
+
+  .artist-profile-merch-bckgrnd-words, .artist-profile-discography-words{
+    font-size: 8vw;
+  }
+}
+
+@media (max-width:375px){
+  .content-box{
+    padding-top: 30px;
+  }
+
+  .artist-profile-title{
+    font-size: 22px;
+  }
+}
+
+
+
+
+

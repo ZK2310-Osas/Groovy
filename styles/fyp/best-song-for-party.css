@@ -1,0 +1,238 @@
+.best-song-for-party-container{
+    display: grid;
+    margin-bottom: 100px;
+    overflow-x: auto;
+    white-space: nowarp;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    
+}
+
+.best-song-for-party-button{
+    position: relative;
+    top: 50px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 4;
+    opacity: 1;
+}
+
+.best-song-for-party-item:hover .best-song-for-party-button{
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.best-song-for-party-item:hover .best-song-for-party-item-pic1{
+    filter: blur(2.7px);
+    filter: brightness(60%);
+}
+
+.best-song-for-party-item:hover .best-song-for-party-item-pic2{
+    animation: partymoveLeftRight 1.5s ease forwards,
+               partyrotate 3s linear infinite;
+    animation-direction: alternate;
+    animation-delay: 0s, 1.5s;
+    z-index: 3;
+}
+
+@keyframes partyrotate {
+    from {
+        transform: translateX(-220px) scale(0.8) rotate(0deg);
+    }
+    to {
+        transform: translateX(-220px) scale(0.8) rotate(360deg);
+    }
+}
+
+@keyframes partymoveLeftRight {
+    0% { transform: translateX(-90px); }
+    15% { transform: translateX(3px); }  
+    25% { transform: translateX(5px); }  
+    100% { transform: translateX(-220px) scale(0.8)}   
+        
+}
+
+.best-song-for-party-topic{
+    margin: 0;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.best-song-for-party-item-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transition: 0.5s all ease-out;
+    height: 320px;
+    
+}
+
+.best-song-for-party-item{
+    position: relative;
+    display: flex;
+    margin-right: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /*height: 200px;*/
+    cursor: pointer;
+
+}
+
+.best-song-for-party-item-pic-container{
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.best-song-for-party-item-pic1{
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    filter: brightness(90%);
+    z-index: 3;
+    object-fit: cover;
+}
+
+.best-song-for-party-item-pic2{
+    width: 220px;
+    height: 220px;
+    z-index: 2;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease;
+}
+
+.best-song-for-party-item-word-container{
+    margin-top: 10px;
+    
+}
+
+.best-song-for-party-item-word-songname{
+    color: white;
+    font-size: 23px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    width: 170px;   
+}
+
+.best-song-for-item-word-artistname{
+    color: #ccd0cf;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bs-horizontal-scroll{
+    width: auto;
+    height: 330px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bs-horizontal-scroll .bs-btn-scroll{
+    background-color: rgba(73, 73, 73, 0.75);
+    color: #999;
+    box-shadow:0 0 10px #999;
+    width: 30px;
+    height: 30px;
+    padding:5px 8px;
+    border: 0;
+    border-radius: 50%;
+    margin: 0 20px;
+    z-index: 4;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+/* Styles for the left scroll button */
+#bs-btn-scroll-left {
+    background-image: url('left-button.png'); /* Replace with your actual image path */
+    background-size: contain;    /* Scale the image to fit the button */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-position: center;  /* Centers the image in the button */
+    width: 40px; /* Adjust width and height to fit image */
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles for the right scroll button */
+#bs-btn-scroll-right {
+    background-image: url('right-button.png'); /* Replace with your actual image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.playlist-link{
+    text-decoration: none;
+}
+
+@media (max-width: 618px){
+    .best-song-for-party-container{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .best-song-for-partys-topic{
+        margin-bottom: 10px;
+    }
+
+    .best-song-for-party-item{
+        width: 220px;
+    }
+
+    .best-song-for-party-item-pic1{
+        width: 170px;
+        height: 170px;
+    }
+
+    .best-song-for-party-item-pic2{
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 320px){
+    .best-song-for-party-container{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .best-song-for-party-topic{
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+
+    .best-song-for-party-item{
+        width: 220px;
+    }
+
+    .best-song-for-party-item-pic1{
+        width: 170px;
+        height: 170px;
+    }
+
+    .best-song-for-party-item-pic2{
+        width: 170px;
+        height: 170px;
+    }
+}

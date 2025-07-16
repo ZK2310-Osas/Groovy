@@ -1,0 +1,227 @@
+.artist-profile-top-image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    filter: brightness(90%);
+}
+
+.artist-profile-top-box{
+    position: relative;
+    height: 450px;
+    width: 100%;
+    /*
+    background-image: url(resources/resized-song-image-225-225/wte-profile.jpg);
+    width: 100%;
+    height: 380px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    */
+}
+
+.artist-profile-top-name{
+    font-size: 46px;
+    font-weight: bold;
+    color: #0e1111;
+}
+
+.artist-profile-top-listeners{
+    font-size: 16px;
+    margin-top: 10px;
+    color: #0e1111;
+}
+
+.artist-profile-top-description{
+    font-size: 14px;
+    margin-top: 20px;
+    color: #3b444b;
+}
+
+.artist-profile-top-play-button{
+    background-color: #0279ff;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 8px;
+}
+
+.artist-profile-top-play-icon{
+    width: 32px;
+    vertical-align: middle;
+}
+
+.artist-profile-top-play-word{
+    display: inline;
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.artist-profile-top-heart-icon{
+    width: 20px;
+}
+
+.artist-profile-top-expand-button{
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    text-decoration: underline;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    color: #3b444b;
+}
+
+.artist-profile-top-heart-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.artist-profile-top-buttons-box{
+    display: flex;
+    align-items: center;
+}
+
+.artist-profile-top-details-box{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 150px;
+    margin-bottom: -114.5px;
+    width: 20%;
+}
+
+.artist-profile-top-play-button-box{
+    flex-grow: 1;
+}
+
+
+/*media query*/
+
+/*
+@media (max-width: 2560px){
+    .artist-profile-top-name{
+        font-size: 60px;
+    }
+}
+    */
+@media (max-width: 1728px){ /* for artist page top section*/
+    .artist-profile-top-name{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1574px){
+    .artist-profile-top-name{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1440px){ 
+    .artist-profile-top-details-box{
+        right: 120px;
+    }
+}
+
+@media (max-width: 1396px){ /*mainly fixing top section*/
+    .artist-profile-top-name{
+        font-size: 35px;
+    }
+    .artist-profile-top-listeners{
+        font-size: 16px;
+    }
+    .artist-profile-top-description{
+        font-size: 14px;
+    }
+    .artist-profile-top-play-icon{
+        width: 26px;
+    }
+}
+
+@media (max-width: 1248px){ 
+    .artist-profile-top-details-box{
+        top: 30px;
+        left: 40px;
+        width: 250px;
+    }
+    .artist-profile-top-desciption-box{
+        display: none;
+    }
+
+    .artist-profile-top-buttons-box{
+        margin-top: 20px;
+    }
+    
+    .artist-profile-top-box{
+      height: 350px;
+    }
+}
+
+
+@media (max-width: 430px){
+    .artist-profile-top-box{
+        height: 300px;
+      }
+
+    .artist-profile-top-name{
+        font-size: 25px;
+    }
+
+    .artist-profile-top-listeners{
+        font-size: 14px;
+    }
+
+    .artist-profile-top-details-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 200px;
+        left: 0;
+        width: 100%;
+        height: 60px;
+    }
+
+    .artist-profile-top-buttons-box{
+        margin-top: 0;
+    }
+
+    .artist-profile-top-play-button{
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 375px){
+    .artist-profile-top-box{
+        height: 200px;
+      }
+      .artist-profile-top-name{
+        font-size: 20px;
+    }
+
+    .artist-profile-top-listeners{
+        font-size: 12px;
+    }
+
+    .artist-profile-top-details-box{
+        top: 115px;
+        left: 0;
+        width: 100%;
+        height: 60px;
+    }
+
+    .artist-profile-top-play-button{
+        padding: 8px 10px;
+        margin-right: 15px;
+    }
+
+    .artist-profile-top-play-word{
+        display: none;
+    }
+}

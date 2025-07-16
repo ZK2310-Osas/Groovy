@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Page</title>
+    <link rel="stylesheet" href="styles/header-section.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/library-section.css">
+    <link rel="stylesheet" href="styles/timeline-section.css">
+    <link rel="stylesheet" href="styles/content-section.css">
+    <link rel="stylesheet" href="styles/album-playlist-page/footer-section-arkar.css">
+    <link rel="stylesheet" href="styles/album-playlist-page/content-section-arkar.css">
+    <link rel="stylesheet" href="styles/album-playlist-page/album-playlist-description-section.css">
+    <link rel="stylesheet" href="styles/album-playlist-page/album-playlist-song-section.css">
+    <link rel="stylesheet" href="styles/scroll.css">
+    <link rel="stylesheet" href="styles/filter-buttons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+
+        .middle-box{
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            bottom: 84px;
+            display: flex;
+        }
+    
+    </style> 
+</head>
+<body>
+    <div class="header-box">
+        <div class="header-hamburger-icon-box">
+            <img class="header-hamburger-icon" src="resources/header-section/hamburger-white.png" alt="">
+        </div>
+        <div class="header-logo-section">
+            <a href="main-fyp.html">
+                <button class="header-logo-button">
+                    <img class="header-logo" src="resources/header-section/logo.png" alt="">
+                    <div class="tooltip">Home</div>
+                  </button>
+            </a>
+            <a href="main-fyp.html">
+                <button>
+                    <p class="header-logo-name">Groovy</p>
+                </button>
+            </a>
+        </div>
+
+        <div class="header-right-section">
+            <div class="nav-box">
+                <a class="nav-home-link" href="main-fyp.html">
+                    <button class="nav-button">Home</button>
+                </a>
+                <a class="nav-discover-link" href="discover-page.html">
+                    <button class="nav-button">Discover</button>
+                </a>
+                <a class="nav-about-us-link" href="about-us.html">
+                    <button class="nav-button">About Us</button>
+                </a>
+                <a class="nav-get-premium-link" href="get-premium-form.html">
+                    <button class="get-premium-button">
+                        Upgrade? 
+                    </button>
+                </a>
+            </div>
+            <div class="header-search-bar-section">
+                <input id="search-bar" type="text" placeholder="What's poppin?">
+    
+                <button class="header-search-button">
+                  <a href=""></a>
+                  <img class="header-search-icon" src="resources/header-section/search.png" alt="">
+                  <div class="tooltip">Search</div>
+                </button>
+                
+                <button class="header-search-bar-idea-button">
+                  <a href=""></a>
+                  <img class="header-search-bar-idea-icon" id="idea-icon-b4-hover" src="resources/header-section/idea.png" alt="">
+                  <div class="tooltip">Ideas?</div>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-user-icon-box">
+            <img class="header-user-icon" src="resources/header-section/alien-user-profile.png" alt="">
+            <img class="header-user-online-dot" src="resources/header-section/online-dot.png" alt="">
+        </div>
+    </div>
+
+    <div class="middle-box">
+        <div class="library-box">
+            <div class="user-section">
+                <div class="user-profile-box">
+                    
+                    <button class="header-user-button">
+                        <a href="user-profile.html">
+                            <img class="user-profile-logo" src="resources/header-section/alien-user-profile.png" alt="">
+                            <div class="tooltip">Profile</div>
+                        </a>
+                    </button>
+                    <img class="user-profile-online" src="resources/header-section/online-dot.png" alt="">
+                </div>
+                
+                    <button class="username-button">
+                        <a href="user-profile.html">
+                            <div class="user-details-box">
+                                <p class="username"><span id="profile-name"></span></p>
+                                <div class="user-premium-status-box">
+                                    <p class="user-premium-status">Not member</p>
+                                    <img class="premium-upgrade-button" src="resources/header-section/up-arrow-white.png" alt="">
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </button>
+                
+                
+                <div>
+                    <button class="user-profile-more-button">
+                        <img class="user-profile-more-icon" src="resources/general-icons/more.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="library-title-box">
+                <p class="library-title">Library</p>
+                <button class="library-title-add-button">
+                    <img class="library-title-add-icon" src="resources/library-section/add.png" alt="">
+                </button>
+                <button class="library-title-expand-button">
+                    <img class="library-title-expand-icon" src="resources/library-section/expand-arrows.png" alt="">
+                </button>
+            </div>
+        
+            <div class="library-sort-search-box">
+                <p class="library-sort">sort by.</p>
+                <button class="library-search-button">
+                    <img class="library-search-icon" src="resources/library-section/search.png" alt="">
+                </button>
+            </div>
+        
+            <div class="library-items-box">
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        <img class="library-playing-img" src="resources/library-section/pause.png" alt="">
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/album-page/coldplay_parachutes.png" alt="">
+                        </a>
+                        <div class="tooltip">parachutes</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" id="current-playing-playlist-title" href="album-page.html">Parachutes</a> <!--change this later-->
+                        <p class="library-playlist-info" id="current-playing-playlist-info">Album | 10 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        2.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/moodyy-playlist-image.png" alt="">
+                        </a>
+                        <div class="tooltip">moodyyy</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">moodyyy</a>
+                        <p class="library-playlist-info">Playlist | 15 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        3.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="playlist-page.html">
+                          <img class="library-playlist-image" src="resources/playlist-page/silenthillfavorites.png" alt="">
+                        </a>
+                        <div class="tooltip">silent hill favorites</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="playlist-page.html">Silent hill favorites</a>
+                        <p class="library-playlist-info">Playlist | 16 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        4.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/requiem-album-image.png" alt="">
+                        </a>
+                        <div class="tooltip">Requiem</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">Requiem</a>
+                        <p class="library-playlist-info">Album | 13 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        5.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section//d4vd-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">d4vd</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">d4vd</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        6.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/retro-playlist-image.png" alt="">
+                        </a>
+                        <div class="tooltip">retro</div>
+                      </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">retro</a>
+                        <p class="library-playlist-info">Playlist | 28 songs</p>
+                    </div>
+                </div>
+            
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        7.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image" src="resources/library-section/SOS-album-image.png" alt="">
+                        </a>
+                        <div class="tooltip">SOS</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">SOS</a>
+                        <p class="library-playlist-info">Album | 23 songs</p>
+                    </div>
+                </div>
+        
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        8.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section/xg-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">XG</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">XG</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+        
+                <div class="library-playlist-display-box">
+                    <div class="playlist-numbering-box">
+                        9.
+                    </div>
+                    <div class="library-playlist-img-box">
+                        <a href="album-page.html">
+                          <img class="library-playlist-image library-artist-profile-image" src="resources/library-section/raveena-profile.jpeg" alt="">
+                        </a>
+                        <div class="tooltip">Raveena</div>
+                    </div>
+                    <div class="library-playlist-info-box">
+                        <a class="library-playlist-name" href="album-page.html">Raveena</a>
+                        <p class="library-playlist-info">Artist</p>
+                    </div>
+                </div>
+
+            </div>
+    
+            <div class="current-enlarged-playing-song-box">
+                <img class="current-enlarged-playing-song-image" src="resources/library-section/indie-pop-playlist-image.png" alt="">
+                <button class="current-playing-collapse-button">
+                    <img class="current-playing-collapse-img" src="resources/library-section/expand-gray.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="content-part" id="content-part"> 
+
+            <div class ="playlist-box2">
+                <div class ="playlist-container"> 
+                    
+                    <img class="playlist-image" src="resources/playlist-page/silenthillfavorites.png" alt="">
+                    <div class = "playlist-container2">
+                        <div class = "playlist-title-name-container">
+                            <p class = "playlist-title"> Playlist </p>
+                            <p class = "playlist-name"> Silent hill favorites </p>
+                        </div>
+                        <div class ="playlist-user-container">
+                            <div class = "play-playlist-container">
+                                <img class="play-playlist" src="resources/album-page/play-button.png" alt="">
+                                <img class="menu-playlist" src="resources/album-page/menu.png" alt="menu_png">
+                            </div>
+                            <div class = "playlist-userdesc-image-container">
+                                <img class="playlist-user-image" src="resources/header-section/alien-user-profile.png" alt="">
+                                <p class="playlist-user"> alien | 16 songs | 44 minutes </p>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class = "songscontainerplaylist">
+       
+                <div class = "tilde"> ~ </div>
+                <div class = "title"> Title</div>
+                <div class = "album"> Album</div>
+                <div class = "duration"> Duration</div>
+        
+                <div class = "songnum"> 1.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Theme of Laura</div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL2(Original Soundtrack)</div>
+                <div class = "songduration"> 3:24 </div>
+                
+
+                <div class = "songnum"> 2.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> True</div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL2(Original Soundtrack)</div>
+                <div class = "songduration"> 3:06 </div>
+                
+
+                <div class = "songnum"> 3.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Promise </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL2(Original Soundtrack)</div>
+                <div class = "songduration"> 4:39 </div>
+                
+
+                <div class = "songnum"> 4.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> White Noiz </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL2(Original Soundtrack)</div>
+                <div class = "songduration">1:23 </div>
+
+
+                <div class = "songnum"> 5.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Blank Fairy </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL2(Original Soundtrack)</div>
+                <div class = "songduration"> 1:12 </div>
+
+
+                <div class = "songnum"> 6.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname">  Forest  </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL2(Original Soundtrack)</div>
+                <div class = "songduration">  1:43</div>
+
+
+                <div class = "songnum"> 7.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> A World Of Madness </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL2(Original Soundtrack)</div>
+                <div class = "songduration">  1:47</div>
+
+                
+                <div class = "songnum"> 8.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> You're Not Here </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration"> 3:45 </div>
+
+
+                <div class = "songnum"> 9.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Float Up from Dream </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration"> 1:22 </div>
+
+
+                <div class = "songnum"> 10.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> A Stray Child </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration">  5:28</div>
+    
+
+                <div class = "songnum"> 11.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Innocent Moon </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration"> 1:38</div>
+            
+
+                <div class = "songnum"> 12.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Maternal Heart </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration"> 3:02 </div>
+
+                <div class = "songnum"> 13.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Dance With Night Wind </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration"> 5:21  </div>
+               
+                
+                <div class = "songnum"> 14.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Prayer </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration"> 1:40 </div>
+              
+
+                <div class = "songnum"> 15.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Walk On Vanity Ruins </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration"> 2:44  </div>
+                
+
+                <div class = "songnum"> 16.</div>
+                <div class = "songs-details"> 
+                    <div class = "songname"> Sun </div>
+                    <div class = "author">Akira Yamaoka</div>
+                </div>
+                <div class = "songalbum"> SILENT HILL3(Original Soundtrack)</div>
+                <div class = "songduration"> 1:47 </div>
+            
+            </div>
+
+            <div class = "similar-playlist-container">
+                <div class="title-filter-box">
+                    <p class="similarplaylisttitle filter-title-box"> Similar playlists you might enjoy </p>
+                </div>
+    
+                <div class="similarplaylist-scrollbar-box scrollbar-box">
+                    <div class="left-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist1.png" alt="">
+                          <p class="playlist-page-similar-name">Best Of Silent Hill OST</p>
+                          <p class="playlist-page-similar-desc">By Aly</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist2.png" alt="">
+                          <p class="playlist-page-similar-name">Silent Hill but it's a 2000' Album</p>
+                          <p class="playlist-page-similar-desc">Credit: Bad Products on Youtube https:/...</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist3.png" alt="">
+                          <p class="playlist-page-similar-name">This is Akira Yamaoka</p>
+                          <p class="playlist-page-similar-desc">This is Akira Yamaoka. The essential tracks, all...</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist4.png" alt="">
+                          <p class="playlist-page-similar-name">Silent Hill (Relaxing Music)</p>
+                          <p class="playlist-page-similar-desc">By Connor Watkins</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist5.png" alt="">
+                          <p class="playlist-page-similar-name">Silent Hill Ambience</p>
+                          <p class="playlist-page-similar-desc">In my restless dreams, I see that town.</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist6.png" alt="">
+                          <p class="playlist-page-similar-name">Silent Chill Redux</p>
+                          <p class="playlist-page-similar-desc">Port of Youtube Video:"Silent Chill...</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist7.png" alt="">
+                          <p class="playlist-page-similar-name">Ambient & Relaxing Silent Hill Music</p>
+                          <p class="playlist-page-similar-desc">By KyoN-tHe_DeStRoYeR</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist8.png" alt="">
+                          <p class="playlist-page-similar-name">Silent Hill Origins,2,3,4&5 OST</p>
+                          <p class="playlist-page-similar-desc">By CHETOGYU</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="playlist-page-similar-container">
+                          <img class="playlist-page-similar-img" src="resources/playlist-page/silenthill_playlist9.png" alt="">
+                          <p class="playlist-page-similar-name">silent hill fogcore</p>
+                          <p class="playlist-page-similar-desc">By foure</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="right-arrow active">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "recommended-playlist-container">
+                <div class="title-filter-box">
+                    <p class="recommendedplaylisttitle filter-title-box"> Recommended songs </p>
+                </div>
+    
+                <div class = "recommendedsongscontainer">
+    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2"> End of Small Sanctuary </div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL3(Original Soundtrack)</div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+                    
+    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2"> Love Psalm </div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL2(Original Soundtrack)</div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+                    
+    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2"> Overdose Delusion </div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL2(Original Soundtrack)</div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+            
+    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2"> I Want Love (Studio Mix) </div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL3(Original Soundtrack) </div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+        
+    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2"> Null Moon </div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL2(Original Soundtrack)</div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+                   
+                    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2"> Heaven's Night </div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL2(Original Soundtrack)</div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+                  
+    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2"> The Day Of Night </div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL2(Original Soundtrack)</div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+                
+    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2"> Letter- from the Lost Days</div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL3(Original Soundtrack)</div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+            
+                    
+                    <div class = "songs-details2"> 
+                        <div class = "songname2">Breeze-in Monochrome Night</div>
+                        <div class = "author2">Akira Yamaoka</div>
+                    </div>
+                    <div class = "songalbum2"> SILENT HILL3(Original Soundtrack)</div>
+                    <img class = "addtoplaylist" src="resources/album-page/add.png" alt="">
+                   
+                </div>
+            </div>
+           
+            
+            <div class="footer-box">
+                <div class="footer-about-us-box">
+                    <p class="footer-content-title">About us</p>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Arkar Kyaw</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Chan Yong Hang</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Chang Zi Kai</button>
+                    </a>
+                    <a href="about-us.html">
+                        <button class="footer-about-us-button">Peti Moe Naing</button>
+                    </a>
+                </div>
+    
+                <div class="footer-contact-us-box">
+                    <p class="footer-content-title">Contact Us</p>
+                    <p class="footer-content">groovy11@gmail.com</p>
+                    <p class="footer-content">+60 1111111</p>
+                </div>
+
+                <div class="footer-premium-plan-box">
+                    <p class="footer-content-title">Premium Plans</p>
+                    <a class="footer-content" href="get-premium-form.html">Trial Plan</a>
+                    <a class="footer-content" href="get-premium-form.html">Monthly Plan</a>
+                    <a class="footer-content" href="get-premium-form.html">Yearly Plan</a>
+                </div>
+    
+                <div class="footer-find-us-box">
+                    <p class="footer-content-title">Find Us At</p>
+                    <img class="footer-social-media-icon" src="resources/footer-section/twitter.png" alt="">
+                    <img class="footer-social-media-icon" src="resources/footer-section/instagram.png" alt="">
+                    <img class="footer-social-media-icon" src="resources/footer-section/facebook.png" alt="">
+                </div>
+            </div>
+        </div> 
+        <div class ="playlist-box">
+            <div class ="playlist-container"> 
+                <p class = "playlist-title"> Playlist </p>
+                <img class="playlist-image" src="resources/playlist-page/silenthillfavorites.png" alt="">
+                <p class = "playlist-name"> Silent hill favorites </p>
+
+                <div class ="play-playlist-container">
+                    <img class="play-playlist" src="resources/album-page/play-button.png" alt="">
+                    <img class="menu-playlist" src="resources/album-page/menu.png" alt="menu_png">
+                </div>
+
+                <div class ="playlist-user-container">
+                    <img class="playlist-user-image" src="resources/header-section/alien-user-profile.png" alt="">
+                    <p class="playlist-user"> alien | 16 songs | 44 minutes </p>
+                </div>
+            </div>
+        </div> 
+        
+    </div>
+
+    <div class="mobile-size-current-playing-box">
+        <div class="mobile-size-current-playing-img-box">
+            <img class="mobile-size-current-playing-img" src="resources/timeline-section/current-playing-music-box/wave-song-image.jpeg" alt="">
+        </div>
+        <div class="mobile-size-current-playing-details-box">
+            <div class="mobile-size-current-playing-song-box">
+                <p class="mobile-size-current-playing-song">wave</p>
+            </div>
+            <div class="mobile-size-current-playing-artist-box">
+                <p class="mobile-size-current-playing-artist">wave to earth</p>
+            </div>
+        </div>
+        <div class="mobile-size-current-playing-more-icon-box">
+            <img class="mobile-size-current-playing-heart-icon" src="resources/timeline-section/current-playing-music-box/heart.png" alt="">
+            <img class="mobile-size-current-playing-more-icon" src="resources/general-icons/more-1d2235.png" alt="">
+        </div>
+    </div>
+
+    <div class="timeline-box">
+        <div class="current-playing-box">
+            <div>
+              <img class="current-playing-img" src="resources/timeline-section/current-playing-music-box/wave-song-image.jpeg" alt="">
+            </div>
+            <div class="current-playing-details">
+                <p class="current-playing-title">wave</p>
+                <a class="current-playing-artist" href="artist-profile-page.html">wave to earth</a>
+            </div>
+            <div>
+                <button>
+                  <img class="current-playing-heart" src="resources/timeline-section/current-playing-music-box/heart.png" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="timeline-right-section-box">
+            <div class="timeline-timebar-box">
+                <p class="timeline-time">4:10</p>
+                <img class="timeline-timebar-img" src="resources/timeline-section/selections/music-timeline.png" alt="">
+                <p class="timeline-time">4:30</p>
+            </div>
+
+            <div class="timeline-selection-box">
+                <div class="timeline-music-selection-box">
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/shuffle.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons timeline-selection-previous-button" src="resources/timeline-section/selections/next-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-play-button" src="resources/timeline-section/selections/play-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/next-button.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/repeat-once.png" alt="">
+                    </button>
+                </div>
+        
+                <div class="timeline-volume-box">
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/list.png" alt="">
+                    </button>
+                    <button>
+                      <img class="timeline-selection-buttons" src="resources/timeline-section/selections/volume-up.png" alt="">
+                    </button>
+                    <button>
+                      <img class="volume-bar" src="resources/timeline-section/selections/volume-bar.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/scroll/album-page-merch-scroll.js"></script>
+    <script src="scripts/scroll/other-album-scroll.js"></script>
+    <script src="scripts/scroll/playlist-scroll.js"></script>
+    <script src="scripts/fyp-js/Username.js"></script>
+</body>
+</html>

@@ -1,0 +1,727 @@
+.new-release-container{
+    display: flex;
+    border-radius: 15px;
+    width: 1400px;
+    height: 450px;
+    margin-bottom: 100px;
+    /* margin-left: 65px; */
+    position: relative;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
+.new-release-background-pic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    z-index: 1;
+    opacity: 1;
+    object-position: top;
+    filter: brightness(85%);
+}
+
+
+.new-release-item{
+    margin: 30px;
+    align-items: center;
+    display: flex;
+    margin-left: 30px;
+    margin-left: 30px;
+    z-index: 2;
+
+
+}
+
+.new-release-album-pic-container{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    transition: filter 0.3s ease;
+}
+
+.new-release-album-pic{
+    float: left;
+    margin: 10px;
+    width: 350px;
+    height: 350px;
+    z-index: 2;
+    transform: transform 0.3s ease;
+    
+    
+}
+
+.new-release-background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    z-index: 0;
+    opacity: 0;
+    object-position: 50% 19%;
+}
+
+.new-release-container:hover .new-release-album-pic-container{
+    transform: scale(1.08);
+    filter: none;
+    animation: Roserotate 3s linear infinite;
+    
+}
+
+@keyframes Roserotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.new-release-container:hover .new-release-background-pic,
+.new-release-container:hover .new-release-word,
+.new-release-container:hover .new-release-roseBruno-pic-container{
+    opacity: 0;
+}
+
+.new-release-container .new-release-background-video{
+    opacity: 1;
+    filter:brightness(70%);
+}
+
+
+
+
+.new-release-album-pic-container:hover .new-release-word,
+.new-release-album-pic-container:hover  .new-release-roseBruno-pic-container{
+    filter: blur(10px);
+}
+
+
+.after-hover-new-release-word{
+    position: absolute; 
+    opacity: 0;  
+    height:300px;
+    width: 800px;
+    left: 60%;
+    color: rgb(226, 226, 226);
+    font-size: 30px;
+    z-index: 1;
+    line-height: 1.6;
+}
+
+.new-release-container:hover .after-hover-new-release-word{
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0);
+    z-index: 2;
+}
+
+
+.new-release-word{
+    color: white;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 400px;
+    width: 280px;
+}
+
+.new-release-topic{
+    margin: 3px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.new-release-song-name{
+    font-size: 110px;
+    margin: 3px;
+    font-weight: bolder;
+}
+
+.new-release-song-info{
+    font-size: 23px;
+    margin: 3px;
+    width: 500px;
+
+}
+
+.new-release-footer{
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.new-release-footer-pic-box{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    margin: 10px;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+
+}
+
+.new-release-footer-pic{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;    
+}
+
+.new-release-roseBruno-pic-container{
+    position: relative;
+    bottom: 0;
+    width: 300px;
+}
+
+.new-release-roseBruno-pic{
+    bottom: 0; 
+    width: 500px;
+    height: 530px;
+    transform: translateY(-38px);
+    padding-left: 85px;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+@media (max-width:1772px){
+    .new-release-container{
+      margin-left: 0px;
+    }
+  }
+
+@media (max-width:1708px){
+    .new-release-container{
+        margin-left: 55px;
+        width: 1200px;
+    }
+
+    .new-release-roseBruno-pic {
+        padding-left: 20px;
+        width: 480px;
+    }
+
+    .new-release-word{
+        margin: 10px;
+        height: 400px;
+        width: 280px;
+    }
+
+    .new-release-topic{
+        margin: 3px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .new-release-song-name{
+        font-size: 105px;
+        margin: 3px;
+        font-weight: bolder;
+    }
+
+    .new-release-song-info{
+        font-size: 20px;
+        margin: 3px;
+        width: 500px;
+
+    }
+
+
+}
+
+@media (max-width:1564px){
+    .new-release-container{
+        margin-left: 85px;
+        width: 900px;
+    }
+
+    .new-release-roseBruno-pic-container{
+        position: relative;
+        right: 8%;
+        bottom: 0%;
+
+    }
+
+    .new-release-roseBruno-pic {
+        position: relative;
+        padding-left: 20px;
+        width: 421px;
+    }
+
+    .after-hover-new-release-word{
+        width:600px;
+        top: 10%;
+    }
+
+    .new-release-word{
+        margin: 10px;
+        height: 400px;
+        width: 280px;
+    }
+
+    .new-release-topic{
+        position: relative;
+        bottom: 8%;
+        margin: 3px;
+        right: 4%;
+        font-size: 29px;
+        font-weight: bold;
+    }
+
+    .new-release-song-name{
+        position: relative;
+        bottom: 8%;
+        font-size: 108px;
+        right: 5%;
+        margin: 3px;
+        font-weight: bolder;
+    }
+
+    .new-release-song-info{
+        position: relative;
+        right: 70%;
+        font-size: 27px;
+        margin: 3px;
+        width: 500px;
+    }
+
+    .new-release-footer{
+        position: relative;
+        right: 70%;
+        margin-top: 60px;
+    }
+
+    .new-release-footer-pic-box{
+        width: 45px;
+        height: 45px;
+    
+    }
+    
+    .new-release-footer-pic{
+        width: 40px;
+        height: 40px;
+        margin: 3px;    
+    }
+
+    .new-release-footer-word{
+        font-size: 30px;
+        width: 300px;
+    }
+
+    .new-release-item{
+        margin: 5px;
+    }
+
+    .new-release-album-pic-container{
+        position: relative;
+        bottom: 25%;
+        margin-right: 0px;
+    }
+
+    .new-release-album-pic{
+        width: 200px;
+        height: 200px;
+        z-index: 2;
+        transform: transform 0.3s ease;  
+    }
+
+
+}
+
+@media (max-width:1286px){
+    .new-release-container{
+        margin-left: 0px;
+        width: auto;
+    }
+
+    .new-release-roseBruno-pic-container{
+        position: relative;
+        right: 22%;
+        bottom: 0%;
+
+    }
+
+    .new-release-roseBruno-pic {
+        position: relative;
+        padding-left: 20px;
+        width: 389px;
+    }
+
+    .after-hover-new-release-word{
+        width:520px;
+        font-size: 25px;
+        top: 10%;
+    }
+
+    .new-release-word{
+        margin: 10px;
+        height: 400px;
+        width: 320px;
+    }
+
+    .new-release-topic{
+        position: relative;
+        bottom: 12%;
+        margin: 3px;
+        right: 55%;
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+    .new-release-song-name{
+        position: relative;
+        font-size: 80px;
+        top: 1%;
+        right: 5%;
+        margin: 3px;
+        font-weight: bolder;
+    }
+
+    .new-release-song-info{
+        position: relative;
+        right: 56%;
+        top: 10%;
+        font-size: 21px;
+        margin: 3px;
+        width: 500px;
+    }
+
+    .new-release-footer{
+        position: relative;
+        right: 60%;
+        margin-top: 60px;
+    }
+
+    .new-release-footer-pic-box{
+        width: 45px;
+        height: 45px;
+    
+    }
+    
+    .new-release-footer-pic{
+        width: 40px;
+        height: 40px;
+        margin: 3px;    
+    }
+
+    .new-release-footer-word{
+        font-size: 29px;
+        width: 300px;
+    }
+
+    .new-release-item{
+        margin: 5px;
+    }
+
+    .new-release-album-pic-container{
+        position: relative;
+        bottom: 11%;
+        margin-right: 0px;
+    }
+
+    .new-release-album-pic{
+        margin-left: 0;
+        width: 170px;
+        height: 170px;
+        z-index: 2;
+        transform: transform 0.3s ease;  
+    }
+
+
+}
+
+@media (max-width:904px){
+    .new-release-container{
+        margin-left: 0px;
+        width: auto;
+    }
+
+    .new-release-roseBruno-pic-container{
+        position: relative;
+        right: 25%;
+        bottom: 0%;
+
+    }
+
+    .new-release-roseBruno-pic {
+        position: relative;
+        padding-left: 20px;
+        width: 365px;
+    }
+
+    .after-hover-new-release-word{
+        position: absolute;
+        width:430px;
+        left: 66%;
+        font-size: 23px;
+        top: 10%;
+    }
+
+    .new-release-word{
+        margin: 10px;
+        height: 400px;
+        width: 280px;
+    }
+
+    .new-release-topic{
+        position: relative;
+        bottom: 8%;
+        margin: 3px;
+        left: -47%;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .new-release-song-name{
+        position: relative;
+        top: -7%;
+        font-size: 70px;
+        right: 35%;
+        margin: 3px;
+        font-weight: bolder;
+    }
+
+    .new-release-song-info{
+        position: relative;
+        top: 30%;
+        right: 50%;
+        font-size: 15px;
+        margin: 3px;
+        width: 500px;
+    }
+
+    .new-release-footer{
+        position: relative;
+        top: 20%;
+        right: 52%;
+        margin-top: 60px;
+    }
+
+    .new-release-footer-pic-box{
+        width: 45px;
+        height: 45px;
+    
+    }
+    
+    .new-release-footer-pic{
+        width: 40px;
+        height: 40px;
+        margin: 3px;    
+    }
+
+    .new-release-footer-word{
+        font-size: 21px;
+        width: 300px;
+    }
+
+    .new-release-item{
+        margin: 5px;
+    }
+
+    .new-release-album-pic-container{
+        position: relative;
+        left: 8%;
+        top: 5%;
+        margin-right: 0px;
+    }
+
+    .new-release-album-pic{
+        margin-left: 0;
+        width: 130px;
+        height: 130px;
+        z-index: 2;
+        transform: transform 0.3s ease;  
+    }
+
+
+}
+
+@media (max-width:430px){
+    .new-release-container{
+        margin-left: 0px;
+        height: 260px;
+        width: auto;
+        margin-bottom: 40px;
+    }
+
+    .new-release-roseBruno-pic-container{
+        position: relative;
+        right: 27.93%;
+        top: 8%;
+        display: none;
+
+    }
+
+    .back-to-80s-roseBruno-pic-container{
+        display: none;
+
+    }
+
+    .new-release-roseBruno-pic {
+        position: relative;
+        padding-left: 0px;
+        width: 175px;
+        height: 300px;
+        display: none;
+    }
+
+    .after-hover-new-release-word{
+        position: absolute;
+        width:230px;
+        left: 66%;
+        font-size: 13px;
+        top: 10%;
+    }
+
+    .new-release-word{
+        margin: 10px;
+        height: 400px;
+        width: 280px;
+    }
+
+    .new-release-topic{
+        position: relative;
+        left: -6%;
+        top: 5%;
+        margin: 3px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .new-release-song-name{
+        position: relative;
+        left: -4%;
+        top: 5%;
+        font-size: 50px;
+        margin: 3px;
+        font-weight: bolder;
+    }
+
+    .new-release-song-info{
+        position: relative;
+        left: -38%;
+        top: 9%;
+        font-size: 13px;
+        margin: 3px;
+        width: 500px;
+    }
+
+    .new-release-footer{
+        position: relative;
+        right:  40%;
+        top: 0%;
+        margin-top: 60px;
+    }
+
+    .new-release-footer-pic-box{
+        width: 35px;
+        height: 35px;
+    
+    }
+    
+    .new-release-footer-pic{
+        width: 30px;
+        height: 30px;
+        margin: 3px;    
+    }
+
+    .new-release-footer-word{
+        font-size: 15px;
+        width: 300px;
+    }
+
+    .new-release-item{
+        margin: 5px;
+    }
+
+    .new-release-album-pic-container{
+        position: relative;
+        left: 1%;
+        top: -22%;
+        margin-right: 0px;
+    }
+
+    .new-release-album-pic{
+        margin-left: 0;
+        width: 90px;
+        height: 90px;
+        z-index: 2;
+        transform: transform 0.3s ease;  
+    }
+
+
+}
+
+@media (max-width:375px){
+    .new-release-container{
+        margin-left: 0px;
+        height: 260px;
+        width: auto;
+        margin-bottom: 40px;
+    }
+
+    .new-release-roseBruno-pic-container{
+        position: relative;
+        right: 27.93%;
+        top: 8%;
+        display: none;
+
+    }
+
+    .new-release-roseBruno-pic {
+        position: relative;
+        padding-left: 0px;
+        width: 125px;
+        height: 300px;
+
+    }
+
+    .after-hover-new-release-word{
+        position: absolute;
+        width:230px;
+        left: 66%;
+        font-size: 13px;
+        top: 10%;
+    }
+}
+
+@media (max-width:320px){
+    .new-release-container{
+        margin-left: 0px;
+        height: 260px;
+        width: auto;
+        margin-bottom: 40px;
+    }
+
+    .new-release-roseBruno-pic-container{
+        position: relative;
+        right: 27.93%;
+        top: 8%;
+        display: none;
+    }
+
+    .new-release-roseBruno-pic {
+        position: relative;
+        padding-left: 0px;
+        width: 105px;
+        height: 300px;
+    }
+
+}

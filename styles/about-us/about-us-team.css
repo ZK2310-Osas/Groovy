@@ -1,0 +1,644 @@
+
+.team-container{
+    display: grid;
+    /*flex-direction: column;*/
+    margin-top: 10%;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-topic{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 65px;
+}
+
+.team-detail-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-inline: 0%;
+}
+
+.team-detail{
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    padding: 15px;
+    width: 383px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent dark overlay */
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-img-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 284px;
+    height: 210px;
+    
+}
+
+.profile-img{
+    width: 180px;
+    height: 200px;
+    margin: 5px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.profile-name{
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 5px;
+    margin-left: 0;
+}
+
+.profile-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-position{
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    padding: 3px;
+    padding-left: 0;
+}
+
+.profile-desc{
+    color: #cecece;
+    font-size: 20px;
+}
+
+.team-detail:hover{
+    transform: scale(1.1);
+}
+
+/* media query about us */
+
+@media  screen and (max-width: 1657px) {
+    
+     .team-detail-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+     }
+
+     .team-detail{
+        margin: 70px;
+     }
+
+     .profile-img-box{
+        width: auto;
+        height: auto;
+     }
+
+     .profile-name{
+        font-size:30px ;
+     }
+
+     .profile-position{
+        font-size: 22px;
+     }
+
+     .profile-desc{
+        font-size:15px ;
+     }
+
+     .our-story-timeline-box{
+        width: 80%;
+     }
+
+    .timeline{
+        width: 90%;
+    }
+
+     .timeline-item{
+        width: 180px;
+     }
+    
+
+     
+}
+
+@media  screen and (max-width: 1380px) {
+    .our-story-timeline-box{
+        width: 80%;
+     }
+
+    .timeline{
+        width: 90%;
+    }
+
+     .timeline-item{
+        width: 160px;
+        font-size: 15px;
+     }
+
+     
+}
+
+@media  screen and (max-width: 1214px) {
+    .our-story-timline-box{
+        margin-block: 13%;
+
+     }
+
+     .info-up, .info-down{
+        width:130% ;
+        font-size: 13px;
+     }
+
+    .timeline{
+        width: 90%;
+    }
+
+     .timeline-item{
+        width: 145px;
+        font-size: 14px;
+     }
+
+     .timeline-item .topic{
+        width: 130px;
+     }
+}
+
+@media  screen and (max-width: 1024px) {
+    .our-story-timline-box{
+        margin-block: 15%;
+
+     }
+
+     .info-up{
+        top: -180px;
+        width:130% ;
+        font-size: 13px;
+     }
+
+     .info-down{
+        top: 160px;
+        width:110% ;
+        font-size: 13px;
+     }
+}
+
+
+@media  screen and (max-width: 1000px) {
+    .our-story-timline-box{
+        margin-block: 15%;
+
+     }
+    
+    .timeline-item{
+        width: 130px;
+        font-size:12px;
+     }
+
+     .timeline-item .topic{
+        width: 130px;
+     }
+
+     .about-us-header-desc{
+        width: 100%;
+        font-size: 20px;
+        margin: 30px;
+        max-width: 80%;
+        line-height: 1.7;
+    }
+
+    .about-us-after-header-word{
+        max-width: 65%;
+    }
+}
+
+@media  screen and (max-width: 980px) {
+    .our-story-timline-box{
+        margin-block: 15%;
+
+     }
+
+     .profile-img-box{
+        width: auto;
+        height: auto;
+     }
+
+     .info-up{
+        top: -180px;
+        width:200% ;
+        font-size: 15px;
+     }
+
+     .info-down{
+        top: 80px;
+        width:160% ;
+        font-size: 15px;
+     }
+
+    .team-detail-container{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       
+    }
+
+    .team-topic{
+        font-size: 30px;
+        margin-left: 23px;
+    }
+
+    .team-detail{
+       margin: 30px;
+       width: 200px;
+    }
+
+    .profile-name{
+       font-size:23px ;
+    }
+
+    .profile-position{
+       font-size: 15px;
+    }
+
+    .profile-desc{
+       font-size:10px ;
+    }
+
+    .our-story-timeline-box{
+       width: 80%;
+    }
+
+    .timeline-item{
+       width: 90px;
+    }
+
+    .timeline-item p{
+        display: none;
+    }
+   
+    .hover-to-explore{
+        font-size: 9px;
+    }
+
+    .our-story-info{
+        width: 340px;
+        max-width: 100%;
+    }
+
+    .our-story-desc{
+        font-size: 18px;
+        max-width: 100%;
+    }
+    
+    .our-story-pic{
+        width: 40%;
+    }
+
+    .our-story-box{
+        width: 90%;
+        margin-left: 4%;
+    }
+
+    .about-us-info-1{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2%;
+        margin-block: 8rem;
+        width: auto;
+        height: 10%;
+        align-items: center;
+        opacity: 1;
+    }
+
+    .about-us-info-1-word-desc {
+        font-size: 19px;
+    }
+
+    .about-us-info-1-word{
+        margin-top: 1%;
+    }
+
+    #about-us-vid {
+        width: 60%;
+        
+    }
+
+    .about-us-after-header{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin: 50px;
+        margin-block: 7rem;
+    }
+    
+    .about-us-after-header-word{
+        font-size: 20px;
+        max-width: 85%;
+        margin-top: 20px;
+    }
+
+    .about-us-header-topic{
+        font-size: 50px;
+    }
+
+    .groovy-team{
+        font-size: 75px;
+    }
+    
+    .about-us-header-desc{
+        width: 100%;
+        font-size: 20px;
+        margin: 30px;
+        max-width: 80%;
+        line-height: 1.7;
+    }
+}
+
+@media  screen and (max-width: 980px) {
+    .our-story-timline-box{
+        margin-block: 15%;
+
+     }
+
+     .info-up{
+        top: -180px;
+        width:190% ;
+        font-size: 12px;
+     }
+
+     .info-down{
+        top: 80px;
+        width:160% ;
+        font-size: 12px;
+     }
+}
+
+@media screen and (max-width: 768px){
+    .our-story-timline-box{
+        margin-block: 15%;
+
+     }
+
+     .info-up{
+        top: -180px;
+        width:170% ;
+        font-size: 13px;
+     }
+
+     .info-down{
+        top: 70px;
+        left: -90%;
+        width:170% ;
+        font-size: 13px;
+     }
+
+     .team-topic{
+        margin-left: 28px;
+     }
+}
+
+@media  screen and (max-width:600px) {
+
+    .team-detail-container{
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team-topic{
+        margin-left: 0px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .team-detail{
+       margin: 15px;
+       width: 200px;
+       margin-bottom: 55px;
+    }
+
+    .profile-img{
+        width: 110px;
+        height: 170px;
+    }
+
+    .profile-name{
+       font-size:17px ;
+       width: 140px;
+    }
+
+    .profile-position{
+       font-size: 15px;
+    }
+
+    .profile-desc{
+       font-size:10px ;
+    }
+
+    .our-story-timline-box{
+       margin-block: 60%;
+    }
+
+    .dot{
+       margin-top: 20px;
+    }
+
+    .info-up{
+        top: -140px;
+        width:190% ;
+        font-size: 13px;
+     }
+
+     .info-down{
+        top: 70px;
+        left: -50%;
+        width:170% ;
+        font-size: 13px;
+     }
+
+    #timeline-item2 .info-down{
+        top: -140px;
+        left: -90%;
+        width:230% ;
+        font-size: 13px;
+    }
+
+    #timeline-item5 .info-up{
+        top: 70px;
+    }
+
+    .timeline{
+        flex-wrap: wrap;
+    }
+
+    .timeline-item{
+       width: 100px;
+    }
+
+    .timeline-item p{
+        display: none;
+    }
+   
+    .hover-to-explore{
+        width: 7%;
+        font-size: 9px;
+    }
+
+    .our-story-box{
+        flex-direction: column-reverse;
+        width: 90%;
+        margin-left: 4%;
+    }
+
+    .our-story-info{
+        width: 340px;
+        max-width: 100%;
+    }
+
+    .our-story-desc{
+        font-size: 18px;
+        max-width: 100%;
+    }
+    
+    .our-story-pic{
+        width: 80%;
+    }
+
+    .about-us-info-1{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2%;
+        margin-block: 8rem;
+        width: auto;
+        height: 10%;
+        align-items: center;
+        opacity: 1;
+    }
+
+    .about-us-info-1-word-desc {
+        font-size: 19px;
+    }
+
+    .about-us-info-1-word{
+        margin-top: 1%;
+    }
+
+    #about-us-vid {
+        width: 80%;
+        
+    }
+
+    .about-us-after-header{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin: 0px;
+        margin-block: 7rem;
+    }
+    
+    .about-us-after-header-word{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .who-we-are{
+        margin-inline: 0;
+    }
+
+    .who-we-are-word{
+        width: 290px;
+    }
+
+    .groovy-team{
+        font-size: 45px;
+    }
+
+    .about-us-header-topic{
+        font-size: 30px;
+    }
+    
+    .about-us-header-desc{
+        width: 100%;
+        font-size: 16px;
+        margin-inline: 0;
+        margin-top: 30px;
+        margin-left: 20px;
+        max-width: 80%;
+        line-height: 1.7;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .info-up{
+        top: -160px;
+        width:140% ;
+        left: -60%;
+        font-size: 13px;
+     }
+
+     .info-down{
+        top: 70px;
+        left: -50%;
+        width:140% ;
+        font-size: 13px;
+     }
+
+    #timeline-item2 .info-down{
+        top: -160px;
+        left: -90%;
+        width:230% ;
+        font-size: 13px;
+    }
+
+    #timeline-item5 .info-up{
+        top: 70px;
+    }
+
+    .who-we-are-word{
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 414px){
+    .info-up{
+        top: -180px;
+        width:140% ;
+        left: -60%;
+        font-size: 13px;
+     }
+
+     .info-down{
+        top: 70px;
+        left: -50%;
+        width:140% ;
+        font-size: 13px;
+     }
+
+    #timeline-item2 .info-down{
+        top: -180px;
+        left: -90%;
+        width:230% ;
+        font-size: 13px;
+    }
+
+    #timeline-item5 .info-up{
+        top: 70px;
+    }
+
+    .who-we-are-word{
+        width: 100%;
+    }
+}
+
+
+

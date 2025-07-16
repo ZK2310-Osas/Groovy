@@ -1,0 +1,107 @@
+.artist-profile-discography-album-img-box{
+    position: relative;
+    height: 120px;
+    width: 180px;
+  }
+  
+  .artist-profile-discography-album-img {
+    width: 120px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .artist-profile-discography-album-vinyl-img{
+    width: 120px;
+    position: absolute;
+    left: 60px;
+    transform: rotate(35deg);
+  }
+  
+  .artist-profile-discography-album-name {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 150px;
+  }
+  
+  .artist-profile-discography-album-details {
+    color: #ccd0cf;
+    font-size: 12px;
+    width: 150px;
+  }
+  
+  .artist-profile-discography-album-details-box{
+    flex-grow: 2;
+    margin-left: 12px;
+  }
+  
+  .artist-profile-discography-album-display-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .artist-profile-discography-box {
+    margin-top: 100px;
+  }
+  
+  /*
+  .artist-profile-discography-content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 35px;
+  }
+    */
+
+/*media query*/
+
+@media(max-width: 768px){
+  .artist-profile-discography-bckgrnd{
+    height: 350px;
+  }
+}
+
+@media (max-width:430px){
+  .artist-profile-discography-bckgrnd{
+    height: 250px;
+  }
+
+  .artist-profile-discography-album-img, .artist-profile-discography-album-vinyl-img{
+    width: 80px;
+  }
+
+  .artist-profile-discography-album-vinyl-img{
+    left: 40px;
+  }
+
+  .artist-profile-discography-album-img-box{
+    width: 120px;
+    height: 80px;
+  }
+
+  .artist-profile-discography-album-name{
+    font-size: 14px;
+  }
+
+  .artist-profile-discography-album-details{
+    font-size: 12px;
+  }
+
+  .artist-profile-discography-album-details-box{
+    margin-left: 8px;
+  }
+}
+
+@media (max-width:375px){
+  .artist-profile-discography-bckgrnd{
+    height: 200px;
+  }
+
+  .artist-profile-discography-box{
+    margin-top: 70px;
+  }
+}
